@@ -182,16 +182,8 @@
   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;inpu type=&quot;text&quot; id=&quot;datetime&quot;/&gt;</span><br></pre></td></tr></table></figure>
 
   3）在对应的js脚本进行初始化
-    $(&apos;#datetime&apos;).datetimepicker({
-      format: &apos;yyyy-mm-dd hh:ii:00&apos;,//格式化日期
-      language: &apos;zh-CN&apos;,//语言选择中文
-      autoclose: true,//选择完日期后，弹出框自动关闭
-      weekStart: 1,//一周从哪一天开始
-      todayBtn: 1,//显示&apos;今天&apos;按钮
-      pickerPosition: &apos;top-right&apos;,//datetimepicker从上面弹出
-      forceParse: 0,//解决回到1899年的问题
-      setStartDate: &apos;2012-01-0&apos;//设置日期时间选择框中的开始时间，在这个时间之前的时间都不能被选择
-    })
+   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">$(&apos;#datetime&apos;).datetimepicker(&#123;</span><br><span class="line">  format: &apos;yyyy-mm-dd hh:ii:00&apos;,//格式化日期</span><br><span class="line">  language: &apos;zh-CN&apos;,//语言选择中文</span><br><span class="line">  autoclose: true,//选择完日期后，弹出框自动关闭</span><br><span class="line">  weekStart: 1,//一周从哪一天开始</span><br><span class="line">  todayBtn: 1,//显示&apos;今天&apos;按钮</span><br><span class="line">  pickerPosition: &apos;top-right&apos;,//datetimepicker从上面弹出</span><br><span class="line">  forceParse: 0,//解决回到1899年的问题</span><br><span class="line">  setStartDate: &apos;2012-01-0&apos;//设置日期时间选择框中的开始时间，在这个时间之前的时间都不能被选择</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
 2、注释
 forceParse:当选择器关闭的时候，是否强制解析输入框中的值。也就是说，当用户在输入框中输入了不正确的日期，选择器将会尽量解析输入的值，并将解析后的正确值按照给定的格式format设置到输入框中。</code></pre><p>​</p>
 

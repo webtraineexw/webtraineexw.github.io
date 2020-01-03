@@ -18,34 +18,10 @@
     <link rel="dns-prefetch" href="http://yoursite.com">
     <!--SEO-->
 
-    <meta name="keywords" content>
+    <meta name="keywords" content="git、github、ssh">
 
 
-    <meta name="description" content="
-
-
-显示结果
-描述
-实体名称
-实体编号
-
-
-
-
-空格
-&amp;nbsp;
-&amp;#160;
-
-
-&lt;
-小于号
-&amp;lt;
-&amp;#60;
-
-
-&gt;
-大于号
-&amp;g...">
+    <meta name="description" content="ssh密钥简单来说就是一对用来连接本地仓库git和远程仓库github的钥匙；如果需要把代码从本地仓库上传到远程仓库，需要在本机生成一对私钥和公钥，私钥放在本机，公钥放到对应的github远程仓...">
 
 
 
@@ -57,7 +33,7 @@
     <!--Title-->
 
 
-<title>实体字符 | 前端小白有话说</title>
+<title>ssh密钥的生成与使用 | 前端小白有话说</title>
 
 
     <link rel="alternate" href="/atom.xml" title="前端小白有话说" type="application/atom+xml">
@@ -162,9 +138,9 @@
                     <p id="process"></p>
 <article class="post">
     <div class="post-head">
-        <h1 id="实体字符">
+        <h1 id="ssh密钥的生成与使用">
             
-	            实体字符
+	            ssh密钥的生成与使用
             
         </h1>
         <div class="post-meta">
@@ -179,6 +155,8 @@
         <span class="fa-wrap">
             <i class="fa fa-tags"></i>
             <span class="tags-meta">
+                
+                    <a class="tag-link" href="/tags/git、github、ssh/">git、github、ssh</a>
                 
             </span>
         </span>
@@ -198,113 +176,19 @@
     </div>
     
     <div class="post-body post-content">
-        <table>
-<thead>
-<tr>
-<th>显示结果</th>
-<th>描述</th>
-<th>实体名称</th>
-<th>实体编号</th>
-</tr>
-</thead>
-<tbody><tr>
-<td></td>
-<td>空格</td>
-<td>&amp;nbsp;</td>
-<td>&amp;#160;</td>
-</tr>
-<tr>
-<td>&lt;</td>
-<td>小于号</td>
-<td>&amp;lt;</td>
-<td>&amp;#60;</td>
-</tr>
-<tr>
-<td>&gt;</td>
-<td>大于号</td>
-<td>&amp;gt;</td>
-<td>&amp;#62;</td>
-</tr>
-<tr>
-<td>&amp;</td>
-<td>和号</td>
-<td>&amp;amp;</td>
-<td>&amp;#38;</td>
-</tr>
-<tr>
-<td>¥</td>
-<td>元（yen）</td>
-<td>&amp;yen;</td>
-<td>&amp;#165;</td>
-</tr>
-<tr>
-<td>©</td>
-<td>版权(copyright)</td>
-<td>&amp;copy;</td>
-<td>&amp;#169;</td>
-</tr>
-<tr>
-<td>®</td>
-<td>注册商标</td>
-<td>&amp;reg;</td>
-<td>&amp;#174;</td>
-</tr>
-<tr>
-<td>™</td>
-<td>商标</td>
-<td>&amp;trade;</td>
-<td>&amp;#8482;</td>
-</tr>
-<tr>
-<td>×</td>
-<td>乘号</td>
-<td>&amp;times;</td>
-<td>&amp;#215;</td>
-</tr>
-<tr>
-<td>÷</td>
-<td>除号</td>
-<td>&amp;divide;</td>
-<td>&amp;#247;</td>
-</tr>
-<tr>
-<td>“</td>
-<td>引号</td>
-<td>&amp;quot;</td>
-<td>&amp;#34;</td>
-</tr>
-<tr>
-<td>‘</td>
-<td>撇号</td>
-<td>&amp;apos;(IE不支持)</td>
-<td>&amp;#39;</td>
-</tr>
-<tr>
-<td>￠</td>
-<td>分（cent）</td>
-<td>&amp;cent;</td>
-<td>&amp;#162;</td>
-</tr>
-<tr>
-<td>£</td>
-<td>镑（pound）</td>
-<td>&amp;pound;</td>
-<td>&amp;#163;</td>
-</tr>
-<tr>
-<td>€</td>
-<td>欧元（euro）</td>
-<td>&amp;euro;</td>
-<td>&amp;#8364;</td>
-</tr>
-<tr>
-<td>§</td>
-<td>小节</td>
-<td>&amp;sect;</td>
-<td>&amp;#167;</td>
-</tr>
-</tbody></table>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">注释：</span><br><span class="line">	1、实体名称对大小写敏感！</span><br><span class="line">	2、中文字符实体空格(&amp;emsp;)。</span><br><span class="line">	3、英文字符实体空格(&amp;nbsp;)。</span><br></pre></td></tr></table></figure>
+        <p>ssh密钥简单来说就是一对用来连接本地仓库git和远程仓库github的钥匙；如果需要把代码从本地仓库上传到远程仓库，需要在本机生成一对私钥和公钥，私钥放在本机，公钥放到对应的github远程仓库中；还有一个好处是github添加ssh公钥后，以后使用git clone的时候，就不需要在重复输入密码了。</p>
+<h2 id="查看本机是否存在密钥"><a href="#查看本机是否存在密钥" class="headerlink" title="查看本机是否存在密钥"></a>查看本机是否存在密钥</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">桌面打开git窗口，输入：<span class="built_in">cd</span> ~/.ssh</span><br><span class="line">如果能进入到.ssh文件目录下 ，证明之前生成过.ssh秘钥，可以直接使用里面的秘钥，将SSH添加到github。</span><br><span class="line">Administrator@G2CY72YFEDT2QHI MINGW64 ~/Desktop</span><br><span class="line">$ <span class="built_in">cd</span> ~/.ssh</span><br><span class="line">Administrator@G2CY72YFEDT2QHI MINGW64 ~/.ssh</span><br><span class="line">$</span><br></pre></td></tr></table></figure>
+
+<h2 id="不存在密钥情况下"><a href="#不存在密钥情况下" class="headerlink" title="不存在密钥情况下"></a>不存在密钥情况下</h2><h4 id="检测自己的配置"><a href="#检测自己的配置" class="headerlink" title="检测自己的配置"></a>检测自己的配置</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">检测下自己之前有没有配置git config user.name和git config user.email这两个命令</span><br><span class="line">直接分别输入这两个命令即可</span><br><span class="line">如果之前没有创建，则执行以下命令创建：</span><br><span class="line">git config –global user.name ‘xxxxx’ </span><br><span class="line">git config –global user.email ‘xxx@xx.xxx’</span><br></pre></td></tr></table></figure>
+
+<h4 id="生成秘钥"><a href="#生成秘钥" class="headerlink" title="生成秘钥"></a>生成秘钥</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C ‘上面的邮箱’</span><br><span class="line">接着出现需要填写的3个命令按回车即可</span><br><span class="line">最后在.ssh目录下得到了两个文件：id_rsa（私有秘钥）和id_rsa.pub（公有密钥）</span><br></pre></td></tr></table></figure>
+
+<h2 id="将SSH添加到github"><a href="#将SSH添加到github" class="headerlink" title="将SSH添加到github"></a>将SSH添加到github</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">github上打开setting-&gt;SSH keys，点击右上角 New SSH key，</span><br><span class="line">把[c盘-&gt;用户-&gt;自己的用户名-&gt;.ssh]目录下生成好的公钥<span class="string">"id_rsa.pub"</span>文件以文本打开</span><br><span class="line">复制放进 key输入框中，再为当前的key起一个title来区分每个key。</span><br></pre></td></tr></table></figure>
+
+<h2 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">在命令窗口上输入    ssh -T git@github.com  按回车键，如看到以下信息，那么就完美了。</span><br><span class="line"><span class="string">"Hi 007xiaoyang! You've successfully authenticated, but GitHub does not provide s hell access."</span></span><br></pre></td></tr></table></figure>
+
+<p>参考链接: <a href="https://blog.csdn.net/lucky__yang/article/details/80148420" target="_blank" rel="noopener">生成SSH秘钥连接github（详细教程）</a></p>
+
     </div>
     
     <div class="post-footer">
@@ -321,15 +205,15 @@
 
 <div class="article-nav prev-next-wrap clearfix">
     
-        <a href="/2020/01/03/ssh密钥/" class="pre-post btn btn-default" title='ssh密钥的生成与使用'>
+        <a href="/2020/01/03/个人博客搭建/" class="pre-post btn btn-default" title='使用hexo+github搭建个人博客'>
             <i class="fa fa-angle-left fa-fw"></i><span class="hidden-lg">上一篇</span>
-            <span class="hidden-xs">ssh密钥的生成与使用</span>
+            <span class="hidden-xs">使用hexo+github搭建个人博客</span>
         </a>
     
     
-        <a href="/2020/01/03/前端介绍/" class="next-post btn btn-default" title='前端简介'>
+        <a href="/2020/01/03/实体字符/" class="next-post btn btn-default" title='实体字符'>
             <span class="hidden-lg">下一篇</span>
-            <span class="hidden-xs">前端简介</span><i class="fa fa-angle-right fa-fw"></i>
+            <span class="hidden-xs">实体字符</span><i class="fa fa-angle-right fa-fw"></i>
         </a>
     
 </div>
@@ -372,7 +256,7 @@
     <div class="widget">
         <h3 class="title">文章目录</h3>
         
-            <p>暂无目录</p>
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#查看本机是否存在密钥"><span class="toc-text">查看本机是否存在密钥</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#不存在密钥情况下"><span class="toc-text">不存在密钥情况下</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#检测自己的配置"><span class="toc-text">检测自己的配置</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#生成秘钥"><span class="toc-text">生成秘钥</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#将SSH添加到github"><span class="toc-text">将SSH添加到github</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#测试"><span class="toc-text">测试</span></a></li></ol>
         
     </div>
 </aside>

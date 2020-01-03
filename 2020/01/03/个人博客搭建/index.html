@@ -21,10 +21,9 @@
     <meta name="keywords" content="hexo、github、ssh密钥">
 
 
-    <meta name="description" content="使用hexo写博客
-准备工作123有一个github账号安装node.js、npm安装git for windows
+    <meta name="description" content="准备工作123有一个github账号安装node.js、npm安装git for windows
 
-github上创建仓库123在github上新建一个名为xxx.githu...">
+github上创建仓库123在github上新建一个名为xxx.github.io的仓库，（x...">
 
 
 
@@ -179,26 +178,27 @@ github上创建仓库123在github上新建一个名为xxx.githu...">
     </div>
     
     <div class="post-body post-content">
-        <p>使用hexo写博客</p>
-<h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">有一个github账号</span><br><span class="line">安装node.js、npm</span><br><span class="line">安装git <span class="keyword">for</span> windows</span><br></pre></td></tr></table></figure>
+        <h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">有一个github账号</span><br><span class="line">安装node.js、npm</span><br><span class="line">安装git <span class="keyword">for</span> windows</span><br></pre></td></tr></table></figure>
 
 <h2 id="github上创建仓库"><a href="#github上创建仓库" class="headerlink" title="github上创建仓库"></a>github上创建仓库</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">在github上新建一个名为xxx.github.io的仓库，（xxx为你的github用户名，其它名称无效）</span><br><span class="line">将来你的网站访问地址就是 http://xxx.github.io </span><br><span class="line">每一个github账户最多只能创建一个这样可以直接使用域名访问的仓库。</span><br></pre></td></tr></table></figure>
 
-<h2 id="配置SSH-key"><a href="#配置SSH-key" class="headerlink" title="配置SSH key"></a>配置SSH key</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">检查本机已存在的ssh密钥，不存在需要生成密钥</span><br></pre></td></tr></table></figure>
+<h2 id="配置SSH密钥"><a href="#配置SSH密钥" class="headerlink" title="配置SSH密钥"></a>配置SSH密钥</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">检查本机已存在的ssh密钥，不存在需要生成密钥</span><br></pre></td></tr></table></figure>
 
-<p>参考链接: <a href="https://webtraineexw.github.io/" target="_blank" rel="noopener">ssh密钥的生成与使用</a></p>
+<p>参考链接: <a href="https://webtraineexw.github.io/2020/01/03/ssh%E5%AF%86%E9%92%A5/" target="_blank" rel="noopener">ssh密钥的生成与使用</a></p>
 <h2 id="hexo安装"><a href="#hexo安装" class="headerlink" title="hexo安装"></a>hexo安装</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo</span><br></pre></td></tr></table></figure>
 
 <h2 id="hexo初始化"><a href="#hexo初始化" class="headerlink" title="hexo初始化"></a>hexo初始化</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">在电脑的某个地方新建一个名为hexo的文件夹，切换到hexo文件夹目录，执行 hexo init</span><br><span class="line">hexo会自动下载一些文件到这个目录，包括node_modules等</span><br><span class="line">执行下列命令：</span><br><span class="line">hexo g <span class="comment"># 生成(hexo会在public文件夹生成相关html文件，这些文件将来都是要提交到github去的)</span></span><br><span class="line">hexo s <span class="comment"># 启动服务(开启本地预览服务，打开浏览器访问 http://localhost:4000 即可看到内容)</span></span><br><span class="line">第一次初始化的时候hexo已经帮我们写了一篇名为 Hello World 的文章，默认的主题比较丑</span><br></pre></td></tr></table></figure>
 
-<p>##　修改主题</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">在hexo官网找到自己喜欢的主题进行下载</span><br><span class="line">切换到hexo目录 </span><br><span class="line">git <span class="built_in">clone</span> https://github.com/shenliyang/hexo-theme-snippet.git</span><br></pre></td></tr></table></figure>
+<h2 id="hexo主题修改"><a href="#hexo主题修改" class="headerlink" title="hexo主题修改"></a>hexo主题修改</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">在hexo官网找到自己喜欢的主题,切换到hexo目录,进行下载</span><br><span class="line">git <span class="built_in">clone</span> https://github.com/shenliyang/hexo-theme-snippet.git</span><br></pre></td></tr></table></figure>
 
 <p> hexo主题: <a href="https://hexo.io/themes/" target="_blank" rel="noopener">官网</a></p>
-<h2 id="上传到github"><a href="#上传到github" class="headerlink" title="上传到github"></a>上传到github</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">如果你一切都配置好了，发布上传很容易，一句 hexo d 就搞定.</span><br></pre></td></tr></table></figure>
+<h2 id="hexo主题配置"><a href="#hexo主题配置" class="headerlink" title="hexo主题配置"></a>hexo主题配置</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">修改_config.yml中的theme: </span><br><span class="line">  theme: material，然后重新执行hexo g来重新生成。</span><br><span class="line">  注意：theme是根据下载主题不同而变化的</span><br><span class="line">修改_config.yml中的deploy:</span><br><span class="line">  <span class="built_in">type</span>: git</span><br><span class="line">  repo: git@github.com:webtraineexw/webtraineexw.github.io.git</span><br><span class="line">  branch: 每次上传分支名称</span><br></pre></td></tr></table></figure>
+
+<h2 id="上传到github"><a href="#上传到github" class="headerlink" title="上传到github"></a>上传到github</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">如果你一切都配置好了，发布上传很容易，一句 hexo d 就搞定.</span><br><span class="line">也可以先执行hexo clean来清理一下public的内容，然后再来重新生成和发布.</span><br><span class="line">注意：从hexo提交代码时会把你以前的所有代码都删掉，最好备份一下。</span><br></pre></td></tr></table></figure>
 
 <h2 id="hexo组合命令"><a href="#hexo组合命令" class="headerlink" title="hexo组合命令"></a>hexo组合命令</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo s -g <span class="comment">#生成并本地预览</span></span><br><span class="line">hexo d -g <span class="comment">#生成并上传</span></span><br></pre></td></tr></table></figure>
 
+<p>参考链接:<a href="https://www.cnblogs.com/liuxianan/p/build-blog-website-by-hexo-github.html" target="_blank" rel="noopener">使用hexo+github搭建免费个人博客详细教程</a></p>
 
     </div>
     
@@ -262,7 +262,7 @@ github上创建仓库123在github上新建一个名为xxx.githu...">
     <div class="widget">
         <h3 class="title">文章目录</h3>
         
-            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#准备工作"><span class="toc-text">准备工作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#github上创建仓库"><span class="toc-text">github上创建仓库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#配置SSH-key"><span class="toc-text">配置SSH key</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#hexo安装"><span class="toc-text">hexo安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#hexo初始化"><span class="toc-text">hexo初始化</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#上传到github"><span class="toc-text">上传到github</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#hexo组合命令"><span class="toc-text">hexo组合命令</span></a></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#准备工作"><span class="toc-text">准备工作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#github上创建仓库"><span class="toc-text">github上创建仓库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#配置SSH密钥"><span class="toc-text">配置SSH密钥</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#hexo安装"><span class="toc-text">hexo安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#hexo初始化"><span class="toc-text">hexo初始化</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#hexo主题修改"><span class="toc-text">hexo主题修改</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#hexo主题配置"><span class="toc-text">hexo主题配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#上传到github"><span class="toc-text">上传到github</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#hexo组合命令"><span class="toc-text">hexo组合命令</span></a></li></ol>
         
     </div>
 </aside>

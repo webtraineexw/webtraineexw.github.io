@@ -1,0 +1,332 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.9.0">
+    <!--Setting-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta name="apple-mobile-web-app-capable" content="前端小白有话说">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no,email=no,adress=no">
+    <meta name="browsermode" content="application">
+    <meta name="screen-orientation" content="portrait">
+    <meta name="theme-version" content="1.2.3">
+    <meta name="root" content="/">
+    <link rel="dns-prefetch" href="http://yoursite.com">
+    <!--SEO-->
+
+    <meta name="keywords" content="rem">
+
+
+    <meta name="description" content="盒子模型12345盒子组成：内容+padding+margin+border盒子大小：内容+padding+border默认情况下宽高是设置给内容区域的padding不会改变盒子的位置，但会改变...">
+
+
+
+<meta name="robots" content="all">
+<meta name="google" content="all">
+<meta name="googlebot" content="all">
+<meta name="verify" content="all">
+
+    <!--Title-->
+
+
+<title>CSS小结 | 前端小白有话说</title>
+
+
+    <link rel="alternate" href="/atom.xml" title="前端小白有话说" type="application/atom+xml">
+
+
+    <link rel="icon" href="/favicon.ico">
+
+    
+
+
+
+<link rel="stylesheet" href="/css/bootstrap.min.css?rev=3.3.7">
+<link rel="stylesheet" href="/css/font-awesome.min.css?rev=4.5.0">
+<link rel="stylesheet" href="/css/style.css?rev=@@hash">
+
+
+
+
+    
+	<div class="hide">
+		<script type="text/javascript">
+			var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan class='cnzz_stat_icon_1263868967 hide' %3E%3Cscript%20src%3D%22https%3A%2F%2Fs95.cnzz.com%2Fz_stat.php%3Fweb_id%3D1272564536%22%3E%3C%2Fscript%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s19.cnzz.com/z_stat.php%3Fid%3D1263868967%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));
+		</script>
+	</div>
+
+
+
+
+
+
+    
+
+</head>
+
+</html>
+<!--[if lte IE 8]>
+<style>
+    html{ font-size: 1em }
+</style>
+<![endif]-->
+<!--[if lte IE 9]>
+<div style="ie">你使用的浏览器版本过低，为了你更好的阅读体验，请更新浏览器的版本或者使用其他现代浏览器，比如Chrome、Firefox、Safari等。</div>
+<![endif]-->
+
+<body>
+    <header class="main-header"  style="background-image:url(http://snippet.shenliyang.com/img/banner.jpg)"  >
+    <div class="main-header-box">
+        <a class="header-avatar" href="/" title='微微'>
+            <img src="/img/avatar2.jpg" alt="logo头像" class="img-responsive center-block">
+        </a>
+        <div class="branding">
+        	<!--<h2 class="text-hide">Snippet主题,从未如此简单有趣</h2>-->
+            
+                 <img src="/img/branding.png" alt="Snippet 博客主题" class="img-responsive center-block">
+            
+    	</div>
+    </div>
+</header>
+    <nav class="main-navigation">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="navbar-header"><span class="nav-toggle-button collapsed pull-right" data-toggle="collapse" data-target="#main-menu" id="mnav">
+                    <span class="sr-only"></span>
+                        <i class="fa fa-bars"></i>
+                    </span>
+                    <a class="navbar-brand" href="http://yoursite.com">前端小白有话说</a>
+                </div>
+                <div class="collapse navbar-collapse" id="main-menu">
+                    <ul class="menu">
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/"><i class="fa "></i>首页</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/categories/前端/"><i class="fa "></i>前端</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/categories/后端/"><i class="fa "></i>后端</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/categories/工具/"><i class="fa "></i>工具</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/archives/"><i class="fa "></i>时间轴</a>
+                            </li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+    <section class="content-wrap">
+        <div class="container">
+            <div class="row">
+                <main class="col-md-8 main-content m-post">
+                    <p id="process"></p>
+<article class="post">
+    <div class="post-head">
+        <h1 id="CSS小结">
+            
+	            CSS小结
+            
+        </h1>
+        <div class="post-meta">
+    
+        <span class="categories-meta fa-wrap">
+            <i class="fa fa-folder-open-o"></i>
+            <a class="category-link" href="/categories/前端/">前端</a>
+        </span>
+    
+
+    
+        <span class="fa-wrap">
+            <i class="fa fa-tags"></i>
+            <span class="tags-meta">
+                
+                    <a class="tag-link" href="/tags/rem/">rem</a>
+                
+            </span>
+        </span>
+    
+
+    
+        
+        <span class="fa-wrap">
+            <i class="fa fa-clock-o"></i>
+            <span class="date-meta">2020/01/03</span>
+        </span>
+        
+    
+</div>
+            
+            
+    </div>
+    
+    <div class="post-body post-content">
+        <h2 id="盒子模型"><a href="#盒子模型" class="headerlink" title="盒子模型"></a>盒子模型</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">盒子组成：内容+padding+margin+border</span><br><span class="line">盒子大小：内容+padding+border</span><br><span class="line">默认情况下宽高是设置给内容区域的</span><br><span class="line">padding不会改变盒子的位置，但会改变内容的</span><br><span class="line">margin改变盒子位置，盒子之间外边距重叠不累计，以最大值为准</span><br></pre></td></tr></table></figure>
+
+<h2 id="border边框"><a href="#border边框" class="headerlink" title="border边框"></a>border边框</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">边框线样式：solid、dashed、dotted</span><br><span class="line">border: 1px solid <span class="comment">#ccc;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="px、em、rem的区别"><a href="#px、em、rem的区别" class="headerlink" title="px、em、rem的区别"></a>px、em、rem的区别</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">px：绝对单位，相对于显示器屏幕分辨率而言。</span><br><span class="line">em：相对单位，相对于父元素字体大小而的单位。</span><br><span class="line">rem：相对单位，相对根元素（html）字体大小的单位，IE9~IE11支持。</span><br><span class="line">注意：使用rem时，margin、padding数值取父元素宽度进行计算。</span><br></pre></td></tr></table></figure>
+
+<h2 id="文字相关样式"><a href="#文字相关样式" class="headerlink" title="文字相关样式"></a>文字相关样式</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">对齐方式     text-algin: left | center | right; 默认值left，只能用在块级元素</span><br><span class="line">文字缩进     text-indent：2em;</span><br><span class="line">文字下划线   text-decoration: none| underline | line-through;</span><br></pre></td></tr></table></figure>
+
+<h2 id="选择器"><a href="#选择器" class="headerlink" title="选择器"></a>选择器</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">优先级：* &lt; 标签 &lt; 类 &lt; id &lt; 行内样式 &lt; !important</span><br><span class="line">后代选择器  div p &#123;&#125;  所有子元素</span><br><span class="line">直接选择器  div&gt;p &#123;&#125;  直接子元素</span><br><span class="line">交集选择器  div.one &#123;&#125; 即是div便签又是class为one的选择器</span><br><span class="line">并集选择器  div,p,span &#123;&#125; 所有div标签、p标签和span标签</span><br></pre></td></tr></table></figure>
+
+<h2 id="伪类选择器"><a href="#伪类选择器" class="headerlink" title="伪类选择器"></a>伪类选择器</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">a:link &#123;&#125;             选中a标签，存在兼容性</span><br><span class="line">a:visited &#123;&#125;          a标签被访问过后样式</span><br><span class="line">a:active &#123;&#125;           a标签被激活后样式</span><br><span class="line">input:focus &#123;&#125;        输入框获取焦点时</span><br><span class="line">xxx:hover &#123;&#125;          鼠标悬停在xxx标签上，标签显示的样式</span><br><span class="line">xxx:hover yyy &#123;&#125;      鼠标悬停在xxx标签上，xxx标签内部yyy标签显示的样式</span><br><span class="line">xxx:first-child &#123;&#125;    第一个xxx元素</span><br><span class="line">xxx:last-child &#123;&#125;     最后一个xxx元素</span><br><span class="line">xxx:nth-child(n) &#123;&#125;   n可以是数字，也可以是even(偶数)，odd(奇数)，表达式(2n+1)</span><br><span class="line">xxx:nth-last-child &#123;&#125; 到数第n个元素，取值同xxx:nth-child(n) &#123;&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="居中"><a href="#居中" class="headerlink" title="居中"></a>居中</h2><h3 id="文字垂直居中"><a href="#文字垂直居中" class="headerlink" title="文字垂直居中"></a>文字垂直居中</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">height: 30px;</span><br><span class="line">line-height: 30px;</span><br></pre></td></tr></table></figure>
+
+<h3 id="盒子水平居中"><a href="#盒子水平居中" class="headerlink" title="盒子水平居中"></a>盒子水平居中</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">margin: 0 auto;</span><br></pre></td></tr></table></figure>
+
+<h3 id="盒子居中"><a href="#盒子居中" class="headerlink" title="盒子居中"></a>盒子居中</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="外边距塌陷"><a href="#外边距塌陷" class="headerlink" title="外边距塌陷"></a>外边距塌陷</h2><p>概念：子元素设置上下边距，父元素也随外边距移动</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">给父元素设置padding-top: 1px; 或者 border: 1px;或者overflow: hidden;</span><br></pre></td></tr></table></figure>
+
+<h2 id="格式上下文（bfc）"><a href="#格式上下文（bfc）" class="headerlink" title="格式上下文（bfc）"></a>格式上下文（bfc）</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="定位影响"><a href="#定位影响" class="headerlink" title="定位影响"></a>定位影响</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">嵌套盒子如果设置定位会导致被定位盒子offsetLeft取值错误</span><br></pre></td></tr></table></figure>
+
+<h2 id="背景图片"><a href="#背景图片" class="headerlink" title="背景图片"></a>背景图片</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">路径： background-image: url(<span class="string">"路径"</span>);</span><br><span class="line">平铺： background-repeat: no-repeat;</span><br><span class="line">位置： background-position: left center;</span><br></pre></td></tr></table></figure>
+
+<h2 id="文字阴影"><a href="#文字阴影" class="headerlink" title="文字阴影"></a>文字阴影</h2><p>可设置多个用逗号,分隔</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">text-shadow: 2px 5px 10px red,</span><br><span class="line">             3px 2px 10px green;</span><br><span class="line">text-shadow: 水平偏移 垂直偏移 模糊度 颜色;</span><br></pre></td></tr></table></figure>
+
+<h2 id="盒子阴影"><a href="#盒子阴影" class="headerlink" title="盒子阴影"></a>盒子阴影</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+    </div>
+    
+    <div class="post-footer">
+        <div>
+            
+                转载声明：商业转载请联系作者获得授权,非商业转载请注明出处 © <a href="" target="_blank">Snippet</a>
+            
+        </div>
+        <div>
+            
+        </div>
+    </div>
+</article>
+
+<div class="article-nav prev-next-wrap clearfix">
+    
+        <a href="/2020/01/03/HTML总结/" class="pre-post btn btn-default" title='HTML小结'>
+            <i class="fa fa-angle-left fa-fw"></i><span class="hidden-lg">上一篇</span>
+            <span class="hidden-xs">HTML小结</span>
+        </a>
+    
+    
+        <a href="/2020/01/03/个人博客搭建/" class="next-post btn btn-default" title='使用hexo+github搭建个人博客'>
+            <span class="hidden-lg">下一篇</span>
+            <span class="hidden-xs">使用hexo+github搭建个人博客</span><i class="fa fa-angle-right fa-fw"></i>
+        </a>
+    
+</div>
+
+
+    <div id="comments">
+        
+	
+    <div id="vcomments" class="valine"></div>
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="/assets/valine.min.js"></script>
+
+    <script>
+        new Valine({
+            av: AV,
+            el: '#vcomments',
+            appId: 'xOKV9J4UeQAtVkvnJC7Kq2Jn-gzGzoHsz',
+            appKey: 'erIpQac4azoCmgfBB7Dl9maa',
+            placeholder: '说点什么吧',
+            notify: false,
+            verify: true,
+            avatar: 'mm',
+            meta: 'nick,mail'.split(','),
+            pageSize: '10',
+            path: window.location.pathname,
+            lang: 'zh-CN'.toLowerCase()
+        })
+    </script>
+
+
+    </div>
+
+
+
+
+
+                </main>
+                
+                    <aside id="article-toc" role="navigation" class="col-md-4">
+    <div class="widget">
+        <h3 class="title">文章目录</h3>
+        
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#盒子模型"><span class="toc-text">盒子模型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#border边框"><span class="toc-text">border边框</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#px、em、rem的区别"><span class="toc-text">px、em、rem的区别</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#文字相关样式"><span class="toc-text">文字相关样式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#选择器"><span class="toc-text">选择器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#伪类选择器"><span class="toc-text">伪类选择器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#居中"><span class="toc-text">居中</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#文字垂直居中"><span class="toc-text">文字垂直居中</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#盒子水平居中"><span class="toc-text">盒子水平居中</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#盒子居中"><span class="toc-text">盒子居中</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#外边距塌陷"><span class="toc-text">外边距塌陷</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#格式上下文（bfc）"><span class="toc-text">格式上下文（bfc）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#定位影响"><span class="toc-text">定位影响</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#背景图片"><span class="toc-text">背景图片</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#文字阴影"><span class="toc-text">文字阴影</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#盒子阴影"><span class="toc-text">盒子阴影</span></a></li></ol>
+        
+    </div>
+</aside>
+
+                
+            </div>
+        </div>
+    </section>
+    <footer class="main-footer">
+    <div class="container">
+        <div class="row">
+        </div>
+    </div>
+</footer>
+
+<a id="back-to-top" class="icon-btn hide">
+	<i class="fa fa-chevron-up"></i>
+</a>
+
+
+
+
+    <div class="copyright">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="busuanzi">
+    
+</div>
+
+            </div>
+            <div class="col-sm-12">
+                <span>Copyright &copy; 2017
+                </span> |
+                <span>
+                    Powered by <a href="//hexo.io" class="copyright-links" target="_blank" rel="nofollow">Hexo</a>
+                </span> |
+                <span>
+                    Theme by <a href="//github.com/shenliyang/hexo-theme-snippet.git" class="copyright-links" target="_blank" rel="nofollow">Snippet</a>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+<script src="/js/app.js?rev=@@hash"></script>
+
+</body>
+</html>

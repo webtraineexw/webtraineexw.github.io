@@ -18,10 +18,34 @@
     <link rel="dns-prefetch" href="http://yoursite.com">
     <!--SEO-->
 
-    <meta name="keywords" content>
+    <meta name="keywords" content="实体字符">
 
 
-    <meta name="description" content>
+    <meta name="description" content="
+
+
+显示结果
+描述
+实体名称
+实体编号
+
+
+
+
+空格
+&amp;nbsp;
+&amp;#160;
+
+
+&lt;
+小于号
+&amp;lt;
+&amp;#60;
+
+
+&gt;
+大于号
+&amp;g...">
 
 
 
@@ -33,7 +57,7 @@
     <!--Title-->
 
 
-<title>标签: 兼容性 | 前端小白有话说</title>
+<title>HTML之实体字符 | 前端小白有话说</title>
 
 
     <link rel="alternate" href="/atom.xml" title="前端小白有话说" type="application/atom+xml">
@@ -134,44 +158,213 @@
     <section class="content-wrap">
         <div class="container">
             <div class="row">
-                <main class="col-md-8 main-content ">
-                    <ol class="breadcrumb">
+                <main class="col-md-8 main-content m-post">
+                    <p id="process"></p>
+<article class="post">
+    <div class="post-head">
+        <h1 id="HTML之实体字符">
+            
+	            HTML之实体字符
+            
+        </h1>
+        <div class="post-meta">
     
-    
-        <li>
-            兼容性
-        </li>
-    
+        <span class="categories-meta fa-wrap">
+            <i class="fa fa-folder-open-o"></i>
+            <a class="category-link" href="/categories/前端/">前端</a>
+        </span>
     
 
-</ol>
+    
+        <span class="fa-wrap">
+            <i class="fa fa-tags"></i>
+            <span class="tags-meta">
+                
+                    <a class="tag-link" href="/tags/实体字符/">实体字符</a>
+                
+            </span>
+        </span>
+    
 
-
-    <article class="post">
+    
         
-        <div class="post-content">
-            <div class="post-head home-post-head">
-                <h1 class="post-title">
-                    <a href="/2020/01/03/兼容性处理/">兼容性处理</a>
-                </h1>
-                <div class="post-meta">  &bull;
-                    <time class="post-date" datetime="" title="">
-                        2020年01月03日
-                    </time>
-                </div>
-            </div>
-            <p class="brief">
-                
-                    谷歌默认最小字体12px123-webkit-text-size-adjust: none;或者-webkit-transform: scale(0.8);
+        <span class="fa-wrap">
+            <i class="fa fa-clock-o"></i>
+            <span class="date-meta">2020/01/03</span>
+        </span>
+        
+    
+</div>
+            
+            
+    </div>
+    
+    <div class="post-body post-content">
+        <table>
+<thead>
+<tr>
+<th>显示结果</th>
+<th>描述</th>
+<th>实体名称</th>
+<th>实体编号</th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td>空格</td>
+<td>&amp;nbsp;</td>
+<td>&amp;#160;</td>
+</tr>
+<tr>
+<td>&lt;</td>
+<td>小于号</td>
+<td>&amp;lt;</td>
+<td>&amp;#60;</td>
+</tr>
+<tr>
+<td>&gt;</td>
+<td>大于号</td>
+<td>&amp;gt;</td>
+<td>&amp;#62;</td>
+</tr>
+<tr>
+<td>&amp;</td>
+<td>和号</td>
+<td>&amp;amp;</td>
+<td>&amp;#38;</td>
+</tr>
+<tr>
+<td>¥</td>
+<td>元（yen）</td>
+<td>&amp;yen;</td>
+<td>&amp;#165;</td>
+</tr>
+<tr>
+<td>©</td>
+<td>版权(copyright)</td>
+<td>&amp;copy;</td>
+<td>&amp;#169;</td>
+</tr>
+<tr>
+<td>®</td>
+<td>注册商标</td>
+<td>&amp;reg;</td>
+<td>&amp;#174;</td>
+</tr>
+<tr>
+<td>™</td>
+<td>商标</td>
+<td>&amp;trade;</td>
+<td>&amp;#8482;</td>
+</tr>
+<tr>
+<td>×</td>
+<td>乘号</td>
+<td>&amp;times;</td>
+<td>&amp;#215;</td>
+</tr>
+<tr>
+<td>÷</td>
+<td>除号</td>
+<td>&amp;divide;</td>
+<td>&amp;#247;</td>
+</tr>
+<tr>
+<td>“</td>
+<td>引号</td>
+<td>&amp;quot;</td>
+<td>&amp;#34;</td>
+</tr>
+<tr>
+<td>‘</td>
+<td>撇号</td>
+<td>&amp;apos;(IE不支持)</td>
+<td>&amp;#39;</td>
+</tr>
+<tr>
+<td>￠</td>
+<td>分（cent）</td>
+<td>&amp;cent;</td>
+<td>&amp;#162;</td>
+</tr>
+<tr>
+<td>£</td>
+<td>镑（pound）</td>
+<td>&amp;pound;</td>
+<td>&amp;#163;</td>
+</tr>
+<tr>
+<td>€</td>
+<td>欧元（euro）</td>
+<td>&amp;euro;</td>
+<td>&amp;#8364;</td>
+</tr>
+<tr>
+<td>§</td>
+<td>小节</td>
+<td>&amp;sect;</td>
+<td>&amp;#167;</td>
+</tr>
+</tbody></table>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">注释：</span><br><span class="line">	1、实体名称对大小写敏感！</span><br><span class="line">	2、中文字符实体空格(&amp;emsp;)。</span><br><span class="line">	3、英文字符实体空格(&amp;nbsp;)。</span><br></pre></td></tr></table></figure>
 
-IE12在IE6下背景图片不显示： 把图片格式png24改为png8flo...
-                
-            </p>
+
+    </div>
+    
+    <div class="post-footer">
+        <div>
+            
+                转载声明：商业转载请联系作者获得授权,非商业转载请注明出处 © <a href="" target="_blank">Snippet</a>
+            
         </div>
-    </article>
- 
+        <div>
+            
+        </div>
+    </div>
+</article>
+
+<div class="article-nav prev-next-wrap clearfix">
+    
+        <a href="/2020/01/03/4CSS/" class="pre-post btn btn-default" title='CSS'>
+            <i class="fa fa-angle-left fa-fw"></i><span class="hidden-lg">上一篇</span>
+            <span class="hidden-xs">CSS</span>
+        </a>
+    
+    
+        <a href="/2020/01/03/2HTML/" class="next-post btn btn-default" title='HTML'>
+            <span class="hidden-lg">下一篇</span>
+            <span class="hidden-xs">HTML</span><i class="fa fa-angle-right fa-fw"></i>
+        </a>
+    
+</div>
 
 
+    <div id="comments">
+        
+	
+    <div id="vcomments" class="valine"></div>
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="/assets/valine.min.js"></script>
+
+    <script>
+        new Valine({
+            av: AV,
+            el: '#vcomments',
+            appId: 'xOKV9J4UeQAtVkvnJC7Kq2Jn-gzGzoHsz',
+            appKey: 'erIpQac4azoCmgfBB7Dl9maa',
+            placeholder: '说点什么吧',
+            notify: false,
+            verify: true,
+            avatar: 'mm',
+            meta: 'nick,mail'.split(','),
+            pageSize: '10',
+            path: window.location.pathname,
+            lang: 'zh-CN'.toLowerCase()
+        })
+    </script>
+
+
+    </div>
 
 
 
@@ -179,126 +372,14 @@ IE12在IE6下背景图片不显示： 把图片格式png24改为png8flo...
 
                 </main>
                 
-                    
-    <aside class="col-md-4 sidebar">
-        
-        
+                    <aside id="article-toc" role="navigation" class="col-md-4">
     <div class="widget">
-        <h3 class="title">搜索</h3>
-        <div id="search-form">
-            <div id="result-mask" class="hide"></div>
-            <div class="search-area">
-                
-                    <input id="search-key" type="search" autocomplete="off" placeholder="搜点什么呢？">
-                    <button type="button" class="search-form-submit" id="search-local">站内搜索</button>
-                
-                
-            </div>
-            <div id="result-wrap" class="hide">
-                <div id="search-result"></div>
-            </div>
-            <div class="hide">
-                <template id="search-tpl">
-                    <div class="item">
-                        <a href="/{path}" title="{title}">
-                            <div class="title">{title}</div>
-                            <div class="content">{content}</div>
-                        </a>
-                    </div>
-                </template>
-            </div>
-        </div>
-    </div>
-
+        <h3 class="title">文章目录</h3>
         
-        
-    <div class="widget">
-        <h3 class="title">网站公告</h3>
-        <div class="notification">
-            <p>
-    主题下载：<a href="https://github.com/shenliyang/hexo-theme-snippet" title="fork me" target="_blank">Snippet主题</a> <br/>
-    主题使用：<a href="https://github.com/shenliyang/hexo-theme-snippet/blob/master/README.md#常见问题" title="" target="_blank">常见使用问题</a> <br/>
-    支持主题：<a href="https://github.com/shenliyang/hexo-theme-snippet/stargazers">Star一下</a>
-</p>
-        </div>
-    </div>
-
-        
-        
-    <div class="widget">
-      <h3 class="title">社交</h3> 
-        <div class="content social">
-            
-	            <a href="//github.com/shenliyang" rel="external nofollow" title="Github" target="_blank">
-			    	<i class="git fa fa-git"></i>
-			    </a>
-            
-	            <a href="mailto:snippet@91h5.cc" rel="external nofollow" title="邮箱" target="_blank">
-			    	<i class="envelope-o fa fa-envelope-o"></i>
-			    </a>
-            
-	            <a href="/" rel="external nofollow" title="联系QQ" target="_blank">
-			    	<i class="qq fa fa-qq"></i>
-			    </a>
-            
-	            <a href="/" rel="external nofollow" title="微信" target="_blank">
-			    	<i class="weixin fa fa-weixin"></i>
-			    </a>
-            
-	            <a href="/" rel="external nofollow" title="QQ群" target="_blank">
-			    	<i class="users fa fa-users"></i>
-			    </a>
-            
-	            <a href="/atom.xml" rel="external nofollow" title="RSS" target="_blank">
-			    	<i class="feed fa fa-feed"></i>
-			    </a>
-            
-        </div>
-    </div>
-
-
-        
-        
-    <div class="widget">
-        <h3 class="title">分类</h3>
-        <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/前端/"><i class="fa" aria-hidden="true">前端</i></a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/工具/"><i class="fa" aria-hidden="true">工具</i></a><span class="category-list-count">2</span></li></ul>
-    </div>
-
-
-        
-        
-    <div class="widget">
-        <h3 class="title">归档</h3>
-        <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/"><i class="fa" aria-hidden="true">2020年01月</i></a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/"><i class="fa" aria-hidden="true">2019年12月</i></a><span class="archive-list-count">1</span></li></ul>
-    </div>
-
-
-        
-        
-  <div class="widget">
-    <h3 class="title">标签云</h3>
-    <div class="content tag-cloud">
-        
-            <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/rem/" style="font-size: 10px;">rem</a> <a href="/tags/ssh密钥/" style="font-size: 10px;">ssh密钥</a> <a href="/tags/兼容性/" style="font-size: 10px;">兼容性</a> <a href="/tags/冒泡、去重/" style="font-size: 10px;">冒泡、去重</a> <a href="/tags/实体字符/" style="font-size: 10px;">实体字符</a> <a href="/tags/网页icon/" style="font-size: 10px;">网页icon</a>
+            <p>暂无目录</p>
         
     </div>
-  </div>
-
-
-        
-        
-    <div class="widget">
-        <h3 class="title">友链</h3>
-        <div class="content friends-link">
-        
-            <a href="https://hexo.io/zh-cn/" class="fa" target="_blank">Hexo官网</a>
-        
-        </div>
-    </div>
-
-
-        
-    </aside>
+</aside>
 
                 
             </div>
@@ -341,8 +422,6 @@ IE12在IE6下背景图片不显示： 把图片格式png24改为png8flo...
     </div>
 </div>
 
-
-	<script src="/js/search.js?rev=@@hash"></script>
 
 
 

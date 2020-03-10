@@ -1,0 +1,490 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.9.0">
+    <!--Setting-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta name="apple-mobile-web-app-capable" content="前端小白有话说">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no,email=no,adress=no">
+    <meta name="browsermode" content="application">
+    <meta name="screen-orientation" content="portrait">
+    <meta name="theme-version" content="1.2.3">
+    <meta name="root" content="/">
+    <link rel="dns-prefetch" href="http://yoursite.com">
+    <!--SEO-->
+
+    <meta name="keywords" content>
+
+
+    <meta name="description" content="js文件添加版本号在项目中添加版本号可避免发布后手动清除缓存
+1&lt;script src=" .. spinunit varietydistribution.js?v20180921"&gt;...">
+
+
+
+<meta name="robots" content="all">
+<meta name="google" content="all">
+<meta name="googlebot" content="all">
+<meta name="verify" content="all">
+
+    <!--Title-->
+
+
+<title>JS归纳 | 前端小白有话说</title>
+
+
+    <link rel="alternate" href="/atom.xml" title="前端小白有话说" type="application/atom+xml">
+
+
+    <link rel="icon" href="/favicon.ico">
+
+    
+
+
+
+<link rel="stylesheet" href="/css/bootstrap.min.css?rev=3.3.7">
+<link rel="stylesheet" href="/css/font-awesome.min.css?rev=4.5.0">
+<link rel="stylesheet" href="/css/style.css?rev=@@hash">
+
+
+
+
+    
+	<div class="hide">
+		<script type="text/javascript">
+			var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan class='cnzz_stat_icon_1263868967 hide' %3E%3Cscript%20src%3D%22https%3A%2F%2Fs95.cnzz.com%2Fz_stat.php%3Fweb_id%3D1272564536%22%3E%3C%2Fscript%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s19.cnzz.com/z_stat.php%3Fid%3D1263868967%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));
+		</script>
+	</div>
+
+
+
+
+
+
+    
+
+</head>
+
+</html>
+<!--[if lte IE 8]>
+<style>
+    html{ font-size: 1em }
+</style>
+<![endif]-->
+<!--[if lte IE 9]>
+<div style="ie">你使用的浏览器版本过低，为了你更好的阅读体验，请更新浏览器的版本或者使用其他现代浏览器，比如Chrome、Firefox、Safari等。</div>
+<![endif]-->
+
+<body>
+    <header class="main-header"  style="background-image:url(http://snippet.shenliyang.com/img/banner.jpg)"  >
+    <div class="main-header-box">
+        <a class="header-avatar" href="/" title='微微'>
+            <img src="/img/avatar2.jpg" alt="logo头像" class="img-responsive center-block">
+        </a>
+        <div class="branding">
+        	<!--<h2 class="text-hide">Snippet主题,从未如此简单有趣</h2>-->
+            
+                 <img src="/img/branding.png" alt="Snippet 博客主题" class="img-responsive center-block">
+            
+    	</div>
+    </div>
+</header>
+    <nav class="main-navigation">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="navbar-header"><span class="nav-toggle-button collapsed pull-right" data-toggle="collapse" data-target="#main-menu" id="mnav">
+                    <span class="sr-only"></span>
+                        <i class="fa fa-bars"></i>
+                    </span>
+                    <a class="navbar-brand" href="http://yoursite.com">前端小白有话说</a>
+                </div>
+                <div class="collapse navbar-collapse" id="main-menu">
+                    <ul class="menu">
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/"><i class="fa "></i>首页</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/categories/前端/"><i class="fa "></i>前端</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/categories/后端/"><i class="fa "></i>后端</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/categories/工具/"><i class="fa "></i>工具</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/archives/"><i class="fa "></i>时间轴</a>
+                            </li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+    <section class="content-wrap">
+        <div class="container">
+            <div class="row">
+                <main class="col-md-8 main-content m-post">
+                    <p id="process"></p>
+<article class="post">
+    <div class="post-head">
+        <h1 id="JS归纳">
+            
+	            JS归纳
+            
+        </h1>
+        <div class="post-meta">
+    
+        <span class="categories-meta fa-wrap">
+            <i class="fa fa-folder-open-o"></i>
+            <a class="category-link" href="/categories/前端/">前端</a>
+        </span>
+    
+
+    
+        <span class="fa-wrap">
+            <i class="fa fa-tags"></i>
+            <span class="tags-meta">
+                
+            </span>
+        </span>
+    
+
+    
+        
+        <span class="fa-wrap">
+            <i class="fa fa-clock-o"></i>
+            <span class="date-meta">2020/01/03</span>
+        </span>
+        
+    
+</div>
+            
+            
+    </div>
+    
+    <div class="post-body post-content">
+        <h2 id="js文件添加版本号"><a href="#js文件添加版本号" class="headerlink" title="js文件添加版本号"></a>js文件添加版本号</h2><p>在项目中添加版本号可避免发布后手动清除缓存</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script src=<span class="string">"../spinUnit/varietyDistribution.js?v20180921"</span>&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="屏幕分辨率"><a href="#屏幕分辨率" class="headerlink" title="屏幕分辨率"></a>屏幕分辨率</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">JS方法</span><br><span class="line">    window.screen.height</span><br><span class="line">    window.screen.width</span><br><span class="line">    </span><br><span class="line">css的媒体查询</span><br><span class="line">    @media screen and (max-width: 768px) &#123;</span><br><span class="line">        /* css代码 */</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="方法支持的检测"><a href="#方法支持的检测" class="headerlink" title="方法支持的检测"></a>方法支持的检测</h2><p>不要通过检测浏览器的不同来检测Web浏览器所支持的方法，要直接检测对该功能的支持,其侧重于功能而非浏览器</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> registerEvent( sTargetID, sEventName, fnHandler ) &#123;</span><br><span class="line">    var oTarget = document.getElementById( sTargetID );</span><br><span class="line">    <span class="keyword">if</span> ( oTarget != null ) &#123;</span><br><span class="line">        <span class="keyword">if</span> ( oTarget.addEventListener ) &#123;  </span><br><span class="line">            oTarget.addEventListener( sEventName, fnToBeRun, <span class="literal">false</span> );</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            var sOnEvent = <span class="string">"on"</span> + sEventName;</span><br><span class="line">            <span class="keyword">if</span> ( oTarget.attachEvent ) &#123;</span><br><span class="line">                 oTarget.attachEvent( sOnEvent, fnHandler );</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="IE问题"><a href="#IE问题" class="headerlink" title="IE问题"></a>IE问题</h2><h3 id="版本判断"><a href="#版本判断" class="headerlink" title="版本判断"></a>版本判断</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">1、IE5.5+判断方法(不包括IE11、IE10)</span><br><span class="line">var ie55 = /MSIE ((5\.[56789])|([6789]))/.test( navigator.userAgent ) &amp;&amp; navigator.platform == &quot;Win32&quot;;</span><br><span class="line">if ( !ie55 ) &#123;</span><br><span class="line">    window.onerror = function () &#123;</span><br><span class="line">        return true;</span><br><span class="line">    &#125;;</span><br><span class="line">&#125;</span><br><span class="line">function writeNotSupported() &#123;</span><br><span class="line">    if ( !ie55 ) &#123;</span><br><span class="line">        document.write( &quot;&lt;p class=\&quot;warning\&quot;&gt;&quot; +&quot;This script only works in Internet Explorer 5.5&quot; +&quot; or greater for Windows&lt;/p&gt;&quot; );</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="兼容性"><a href="#兼容性" class="headerlink" title="兼容性"></a>兼容性</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">1、在IE6下背景图片不显示</span><br><span class="line">	解决办法：把图片格式png24改为png8</span><br><span class="line">2、<span class="built_in">float</span>元素出现双边距</span><br><span class="line">	解决办法：元素设置_display: inline;</span><br><span class="line">3、parseInt()的取值异常</span><br><span class="line">	IE8下会把<span class="string">'0'</span>开头的数字以8进制来解析，当有大于7的数字时候就按10进制来解析。</span><br><span class="line">	解决办法：指定进制参数，如parseInt(<span class="string">'08'</span>,10);</span><br><span class="line">4、IE6双边距</span><br><span class="line">	块属性标签<span class="built_in">float</span>后，又有横向的margin下，IE6显示的边距比设置的大。</span><br><span class="line">	解决办法：hack: display: inline;</span><br><span class="line">5、不同浏览器默认的margin和padding不一致</span><br><span class="line">	解决办法：* &#123;margin:0;padding:0&#125;</span><br><span class="line">6、IE渐进识别</span><br><span class="line">	&#123;</span><br><span class="line">        color:<span class="string">"red"</span>;/*所有识别*/</span><br><span class="line">        .color:<span class="string">"pink"</span>;/*IE6、7、8识别*/</span><br><span class="line">        +color:<span class="string">"pink"</span>;/*IE6、7识别*/</span><br><span class="line">        _color:<span class="string">"pink"</span>;/*IE6识别*/</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="API的变化"><a href="#API的变化" class="headerlink" title="API的变化"></a>API的变化</h3><table>
+<thead>
+<tr>
+<th align="left">旧的API</th>
+<th align="left">新的API</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">attachEvent</td>
+<td align="left">addEventListener</td>
+</tr>
+<tr>
+<td align="left">window.execScript</td>
+<td align="left">eval</td>
+</tr>
+<tr>
+<td align="left">window.doScroll</td>
+<td align="left">window.scrollLeft、window.scrollTop</td>
+</tr>
+<tr>
+<td align="left">document.all</td>
+<td align="left">document.getElementById</td>
+</tr>
+<tr>
+<td align="left">document.fileSize、img.fileSize</td>
+<td align="left">使用 XMLHttpRequest 可提取源</td>
+</tr>
+<tr>
+<td align="left">script.onreadystatechange 和 script.readyState</td>
+<td align="left">script.onload</td>
+</tr>
+<tr>
+<td align="left">document.selection</td>
+<td align="left">window.getSelection</td>
+</tr>
+<tr>
+<td align="left">document.createStyleSheet</td>
+<td align="left">document.createElement(“style”)</td>
+</tr>
+<tr>
+<td align="left">style.styleSheet</td>
+<td align="left">style.sheet</td>
+</tr>
+<tr>
+<td align="left">window.createPopup</td>
+<td align="left">使用 div 或 iframe（zIndex 值很高）</td>
+</tr>
+</tbody></table>
+<h3 id="get请求缓存"><a href="#get请求缓存" class="headerlink" title="get请求缓存"></a>get请求缓存</h3><p>IE为了提高用户访问速度，get请求方法会缓存返回结果。如果数据改变了，读取的数据不是最新数据。火狐/谷歌下，则不会缓存。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">1、加随机参数：url加上随机数，欺骗浏览器url改变了，会每次都向服务器发送请求而不去读缓存</span><br><span class="line">    ajax请求地址后加随机参数，如XXXX?t= + new Date().getTime();</span><br><span class="line">    或者</span><br><span class="line">    在url后面加一个随机数，如XXXX?number=Math.random(); </span><br><span class="line">    或者</span><br><span class="line">    在$.get()的data后面加上新的随机参数，如&#123;data: mydata, stamp: Math.random()&#125;;</span><br><span class="line">2、直接给ajax设置参数：cache设置为<span class="literal">false</span></span><br><span class="line">		$.ajax(&#123;cache:<span class="literal">false</span>&#125;);</span><br></pre></td></tr></table></figure>
+
+<h2 id="请求乱码"><a href="#请求乱码" class="headerlink" title="请求乱码"></a>请求乱码</h2><p>在IE的地址栏中输入带中文的参数，传到JAVA端后是乱码。谷歌等浏览器中却没有此问题.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">解决方法：对参数进行编码然后发送请求</span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th align="center">编码</th>
+<th align="center">编码方法</th>
+<th align="center">解码方法</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">1</td>
+<td align="center">escape()</td>
+<td align="center">unescape()</td>
+</tr>
+<tr>
+<td align="center">2</td>
+<td align="center">encodeURI()</td>
+<td align="center">decodeURI()</td>
+</tr>
+<tr>
+<td align="center">3</td>
+<td align="center">encodeURIComponent()</td>
+<td align="center">decodeURIComponent()</td>
+</tr>
+</tbody></table>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">escape()在from表单提交时，空格会被转换为+，escape()不会对+进行编码。不推荐使用</span><br><span class="line">encodeURI()只对中文部分转码.</span><br><span class="line">encodeURIComponent()对中文和特殊字符均会转码。</span><br></pre></td></tr></table></figure>
+
+<h2 id="创建对象"><a href="#创建对象" class="headerlink" title="创建对象"></a>创建对象</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">Object构造函数、字面量、工厂模式、构造函数模式、原型模式、</span><br><span class="line">组合使用构造函数+原型模式、动态原型模式、寄生构造函数模式、稳妥构造函数模式</span><br><span class="line">1.字面量</span><br><span class="line"><span class="built_in">let</span> obj=&#123;<span class="string">'name'</span>:<span class="string">'张三'</span>&#125;</span><br><span class="line">2.Object构造函数创建</span><br><span class="line"><span class="built_in">let</span> Obj=new Object()</span><br><span class="line">Obj.name=<span class="string">'张三'</span></span><br><span class="line">3.使用工厂模式创建对象</span><br><span class="line"><span class="keyword">function</span> createPerson(name)&#123;</span><br><span class="line"> var o = new Object();</span><br><span class="line"> o.name = name;</span><br><span class="line"> &#125;;</span><br><span class="line"> <span class="built_in">return</span> o; </span><br><span class="line">&#125;</span><br><span class="line">var person1 = createPerson(<span class="string">'张三'</span>);</span><br><span class="line">4.使用构造函数创建对象</span><br><span class="line"><span class="keyword">function</span> Person(name)&#123;</span><br><span class="line"> this.name = name;</span><br><span class="line">&#125;</span><br><span class="line">var person1 = new Person(<span class="string">'张三'</span>);</span><br></pre></td></tr></table></figure>
+
+<h2 id="手动封装一个new运算符"><a href="#手动封装一个new运算符" class="headerlink" title="手动封装一个new运算符"></a>手动封装一个new运算符</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">var new2 = <span class="keyword">function</span> (func) &#123;</span><br><span class="line">    var o = Object.create(func.prototype); //创建对象</span><br><span class="line">    var k = func.call(o);　　　　　　　　　　//改变this指向，把结果付给k</span><br><span class="line">    <span class="keyword">if</span> (typeof k === <span class="string">'object'</span>) &#123;　　　　　　//判断k的类型是不是对象</span><br><span class="line">        <span class="built_in">return</span> k;　　　　　　　　　　　　　　//是，返回k</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;     </span><br><span class="line">        <span class="built_in">return</span> o;　　　　　　　　　　　　　　　//不是返回返回构造函数的执行结果</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h2><p>继承方式有借接口继承(继承方法的签名)和实现继承(继承方法)，ES中函数没有签名，所以ES只支持实现继承。实现继承主要依靠原型链实现。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">1、原型链:每个构造函数都有一个原型对象，原型对象都包含一个指向构造函数的指针constructor</span><br><span class="line">构造函数实例化的对象都包含一个指向原型对象的内部指针_proto_</span><br><span class="line">缺点：引用类型属性共享</span><br><span class="line">2、借用构造函数继承</span><br><span class="line">缺点：方法无法复用</span><br><span class="line">3、组合继承</span><br><span class="line">缺点：属性创建两次</span><br><span class="line">4、原型式继承</span><br><span class="line">5、寄生式继承</span><br><span class="line">6、寄生组合式继承</span><br><span class="line">缺点：解决组合继承的缺点</span><br></pre></td></tr></table></figure>
+
+<h2 id="递归"><a href="#递归" class="headerlink" title="递归"></a>递归</h2><p>要有一个结束的条件和在函数内要通过适当的时机来自己调用自己</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"> * node 表示，要进行递归的那个节点</span><br><span class="line"> * keyArr 是数组，用来存放所有 三级权限的Id  </span><br><span class="line"> const scopeRow = require(<span class="string">'./tree_data'</span>);</span><br><span class="line"><span class="keyword">function</span> getLeafIds(node, keyArr) &#123;</span><br><span class="line">    <span class="keyword">if</span> (!node.children) &#123;</span><br><span class="line">        keyArr.push(node.id)</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        node.children.forEach(item =&gt; &#123;</span><br><span class="line">            getLeafIds(item, keyArr)</span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line">const keys = [];</span><br><span class="line">getLeafIds(scopeRow, keys);</span><br><span class="line">console.log(keys);</span><br></pre></td></tr></table></figure>
+
+<h2 id="阻止默认事件"><a href="#阻止默认事件" class="headerlink" title="阻止默认事件"></a>阻止默认事件</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span>、w3c方法是：e.preventDefault();</span><br><span class="line"><span class="number">2</span>、IE方法：e.returnValue = <span class="literal">false</span>;</span><br><span class="line"><span class="number">3</span>、阻止浏览器默认行为</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">stopDefault</span>(<span class="params">e</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(e&amp;&amp;e.preventDefault)</span><br><span class="line">       e.preventDefault();</span><br><span class="line">    <span class="keyword">else</span> </span><br><span class="line">      <span class="built_in">window</span>.event.returnValue = <span class="literal">false</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="阻止冒泡"><a href="#阻止冒泡" class="headerlink" title="阻止冒泡"></a>阻止冒泡</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span>、事件按照从最特定的事件目标到最不特定的事件目标(<span class="built_in">document</span>对象)的顺序触发。</span><br><span class="line"><span class="number">2</span>、w3c方法是：e.stopPropagation();</span><br><span class="line"><span class="number">3</span>、IE方法：e.cancleBubble = <span class="literal">true</span>;</span><br><span class="line"><span class="number">4</span>、阻止冒泡行为</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">stopBubble</span>(<span class="params">e</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(e&amp;&amp;e.stopPropagation)</span><br><span class="line">       e.stopPropagation();</span><br><span class="line">    <span class="keyword">else</span> </span><br><span class="line">      <span class="built_in">window</span>.event.cancleBubble = <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="number">5</span>、事件流分为两种：捕获事件流和冒泡事件流。</span><br><span class="line"><span class="number">6</span>、捕获事件流：从根节点开始执行，一直往子节点查找执行，直到查找到目标节点。</span><br><span class="line"><span class="number">7</span>、冒泡事件流：从目标节点开始执行，一直往父节点冒泡查找执行，直到查找到根节点。</span><br><span class="line"><span class="number">8</span>、事件流的三个阶段：捕获节点阶段、处于目标节点阶段、冒泡阶段。</span><br></pre></td></tr></table></figure>
+
+<h2 id="判断数组是否为空"><a href="#判断数组是否为空" class="headerlink" title="判断数组是否为空"></a>判断数组是否为空</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> isEmptyArray(obj) &#123;</span><br><span class="line">    <span class="keyword">if</span> (obj == undefined || obj.length == 0) &#123;</span><br><span class="line">        <span class="built_in">return</span> <span class="literal">true</span></span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="built_in">return</span> <span class="literal">false</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="转换布尔值的情况"><a href="#转换布尔值的情况" class="headerlink" title="转换布尔值的情况"></a>转换布尔值的情况</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">函数不写<span class="built_in">return</span>或者<span class="built_in">return</span>不加任何东西时，会返回undefined，判断时会转为<span class="literal">false</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="jQuery追加删除元素"><a href="#jQuery追加删除元素" class="headerlink" title="jQuery追加删除元素"></a>jQuery追加删除元素</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">append()、prepend()、after()、before()、remove()</span><br></pre></td></tr></table></figure>
+
+<h2 id="编写jQuery插件"><a href="#编写jQuery插件" class="headerlink" title="编写jQuery插件"></a>编写jQuery插件</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">1、jQuery对象绑定新方法，通过扩展$.fn对象实现</span><br><span class="line">$.fn.highlight = <span class="function"><span class="title">function</span></span> () &#123;</span><br><span class="line">    //this绑定为当前Jquery对象</span><br><span class="line">    this.css(<span class="string">'backgroundColor'</span>,<span class="string">'#fffceb'</span>).css(<span class="string">"color"</span>,<span class="string">"#d85030"</span>);</span><br><span class="line">    <span class="built_in">return</span> this;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">return</span> this 是因为jQuery对象支持链式操作，自己写的扩展方法也能链式下去</span><br><span class="line">2、highlight方法可以传参，让用户自己定义方法属性</span><br><span class="line">$.fn.highlight2 = <span class="keyword">function</span> (options) &#123;</span><br><span class="line">    var bgcolor = options &amp;&amp; options.backgroundColor || <span class="string">"fffceb"</span>;</span><br><span class="line">    var color = options &amp;&amp; options.color || <span class="string">"d85030"</span>;</span><br><span class="line">    //this绑定为当前Jquery对象</span><br><span class="line">    this.css(<span class="string">'backgroundColor'</span>,bgcolor).css(<span class="string">"color"</span>,color);</span><br><span class="line">    <span class="built_in">return</span> this;</span><br><span class="line">&#125;</span><br><span class="line">3、最终版</span><br><span class="line">$.fn.highlight = <span class="keyword">function</span> (options) &#123;</span><br><span class="line">    var opts= $.extend(&#123;&#125;,$.fn.highlight.defaults,options);</span><br><span class="line">    //this绑定为当前Jquery对象</span><br><span class="line">    this.css(<span class="string">'backgroundColor'</span>,opts.backgroundColor).css(<span class="string">"color"</span>,opts.color);</span><br><span class="line">    <span class="built_in">return</span> this;</span><br><span class="line">&#125;</span><br><span class="line">$.fn.highlight.defaults = &#123;</span><br><span class="line">    backgroundColor: <span class="string">"#fffceb"</span>,</span><br><span class="line">    color: <span class="string">"#d85030"</span></span><br><span class="line">&#125;</span><br><span class="line">使用</span><br><span class="line">$.fn.highlight.defaults.backgroundColor = <span class="string">"#000"</span>;</span><br><span class="line">$.fn.highlight.defaults.color = <span class="string">"#fff"</span>;</span><br><span class="line">highlight();</span><br><span class="line">编写jQuery插件原则：</span><br><span class="line">    给$.fn绑定函数，实现插件的代码逻辑</span><br><span class="line">    插件函数最后要<span class="built_in">return</span> this以支持链式调用</span><br><span class="line">    插件函数要有默认值，绑定在$.fn.highlight.defaults上</span><br><span class="line">    用户在调用是可以传入设定值以便覆盖默认值</span><br></pre></td></tr></table></figure>
+
+<h2 id="JS-函数有-4-个内置方法："><a href="#JS-函数有-4-个内置方法：" class="headerlink" title="JS 函数有 4 个内置方法："></a>JS 函数有 4 个内置方法：</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Function.prototype.apply()</span><br><span class="line">Function.prototype.bind()</span><br><span class="line">Function.prototype.call()</span><br><span class="line">Function.prototype.toString()返回函数代码的字符串表示</span><br></pre></td></tr></table></figure>
+
+<h2 id="toString-NaN"><a href="#toString-NaN" class="headerlink" title="toString()"></a>toString()</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">toString()方法返回字符串</span><br><span class="line">但是Object的toString()方法返回的是当前方法执行的主体</span><br></pre></td></tr></table></figure>
+
+<h2 id="call-、apply-、bind"><a href="#call-、apply-、bind" class="headerlink" title="call()、apply()、bind()"></a>call()、apply()、bind()</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">call()、apply()、<span class="built_in">bind</span>()改变this指向</span><br><span class="line"><span class="built_in">bind</span>()不会调用方法,不兼容IE8</span><br><span class="line">call()继承</span><br><span class="line">判断字符类型</span><br><span class="line">Object.prototype.toString.call(&#123;&#125;)</span><br><span class="line">apply()</span><br><span class="line">合并数组</span><br><span class="line"><span class="built_in">let</span> arr1=[1,2,3]; </span><br><span class="line"><span class="built_in">let</span> arr2=[4,5,6]; </span><br><span class="line">Array.prototype.push.apply(arr1,arr2); //将arr2合并到了arr1中</span><br><span class="line">求数组最大值</span><br><span class="line">Math.max.apply(null,arr)</span><br></pre></td></tr></table></figure>
+
+<h2 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h2><p>给数组中的元素排序</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">sort方法或<span class="keyword">for</span>循环</span><br><span class="line">var examplearr = [8, 94, 15, 88, 55, 76, 21, 39,7];</span><br><span class="line"><span class="keyword">function</span> sortarr(arr) &#123;</span><br><span class="line">    <span class="keyword">for</span> (i = 0; i &lt; arr.length - 1; i++) &#123;</span><br><span class="line">        <span class="keyword">for</span> (j = 0; j &lt; arr.length - 1 - i; j++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (arr[j] &gt; arr[j + 1]) &#123;</span><br><span class="line">              var temp = arr[j];</span><br><span class="line">              arr[j] = arr[j + 1];</span><br><span class="line">              arr[j + 1] = temp;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">return</span> arr</span><br><span class="line">&#125;</span><br><span class="line">sortarr(examplearr)</span><br><span class="line">console.log(examplearr)</span><br></pre></td></tr></table></figure>
+
+<h2 id="数组去重"><a href="#数组去重" class="headerlink" title="数组去重"></a>数组去重</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br></pre></td><td class="code"><pre><span class="line">方法1：ES6中Set</span><br><span class="line"><span class="built_in">let</span> arr = [4,1,3,3,2,<span class="string">'2'</span>];</span><br><span class="line"><span class="built_in">let</span> uniqueArr = [...new Set(arr)];</span><br><span class="line">console.log(uniqueArr) //[4,1,3,2,<span class="string">'2'</span>]</span><br><span class="line">方法2：嵌套<span class="keyword">for</span></span><br><span class="line"><span class="keyword">function</span> unique(arr) &#123;</span><br><span class="line">    <span class="keyword">for</span> (var i = 0; i &lt; arr.length; i++) &#123;</span><br><span class="line">        <span class="keyword">for</span> (var j = i + 1; j &lt; arr.length; j++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (arr[i] == arr[j]) &#123;</span><br><span class="line">                arr.splice(j, 1)</span><br><span class="line">                j--</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">return</span> arr</span><br><span class="line">&#125;</span><br><span class="line">方法3：indexOf方法</span><br><span class="line"><span class="keyword">function</span> unique(arr) &#123;</span><br><span class="line">    <span class="keyword">if</span> (!Array.isArray(arr)) &#123;</span><br><span class="line">        console.log(<span class="string">'type error!'</span>)</span><br><span class="line">        <span class="built_in">return</span></span><br><span class="line">    &#125;</span><br><span class="line">    var array = []</span><br><span class="line">    <span class="keyword">for</span> (var i = 0; i &lt; arr.length; i++) &#123;</span><br><span class="line">        <span class="keyword">if</span> (array.indexOf(arr[i]) === -1) &#123;</span><br><span class="line">            array.push(arr[i])</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">return</span> array</span><br><span class="line">&#125;</span><br><span class="line">方法4：对象的属性不能相同的特点</span><br><span class="line"><span class="keyword">function</span> unique(arr) &#123;</span><br><span class="line">    <span class="keyword">if</span> (!Array.isArray(arr)) &#123;</span><br><span class="line">        console.log(<span class="string">'type error!'</span>)</span><br><span class="line">        <span class="built_in">return</span></span><br><span class="line">    &#125;</span><br><span class="line">    var arrry = []</span><br><span class="line">    var obj = &#123;&#125;</span><br><span class="line">    <span class="keyword">for</span> (var i = 0; i &lt; arr.length; i++) &#123;</span><br><span class="line">        <span class="keyword">if</span> (!obj[arr[i]]) &#123;</span><br><span class="line">            arrry.push(arr[i])</span><br><span class="line">            obj[arr[i]] = 1</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            obj[arr[i]]++</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">return</span> arrry</span><br><span class="line">&#125;</span><br><span class="line">方法5：includes方法</span><br><span class="line"><span class="keyword">function</span> unique(arr) &#123;</span><br><span class="line">    <span class="keyword">if</span> (!Array.isArray(arr)) &#123;</span><br><span class="line">        console.log(<span class="string">'type error!'</span>)</span><br><span class="line">        <span class="built_in">return</span></span><br><span class="line">    &#125;</span><br><span class="line">    var arrry = []</span><br><span class="line">    <span class="keyword">for</span> (vari = 0; i &lt; arr.length; i++) &#123;</span><br><span class="line">        <span class="keyword">if</span> (!arrry.includes(arr[i])) &#123;</span><br><span class="line">            //includes 检测数组是否有某个值</span><br><span class="line">            arrry.push(arr[i])</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">方法6：filter方法</span><br><span class="line"><span class="keyword">function</span> unique(arr) &#123;</span><br><span class="line">    <span class="built_in">return</span> arr.filter(<span class="keyword">function</span>(item, index, arr) &#123;</span><br><span class="line">        //当前元素，在原始数组中的第一个索引==当前索引值，否则返回当前元素</span><br><span class="line">        <span class="built_in">return</span> arr.indexOf(item, 0) === index</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="回文字符判断-字符串翻转"><a href="#回文字符判断-字符串翻转" class="headerlink" title="回文字符判断_字符串翻转"></a>回文字符判断_字符串翻转</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> run(input) &#123;</span><br><span class="line">    <span class="keyword">if</span>(typeOf input !== <span class="string">'string'</span>) <span class="built_in">return</span> <span class="literal">false</span>;</span><br><span class="line">    <span class="built_in">return</span> input.split(<span class="string">''</span>).reverse().join(<span class="string">''</span>) === input;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="驼峰大写转换"><a href="#驼峰大写转换" class="headerlink" title="驼峰大写转换"></a>驼峰大写转换</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">var str =<span class="string">'get-element-by-id'</span>;</span><br><span class="line">var str1 = str.split(<span class="string">'-'</span>);</span><br><span class="line"><span class="keyword">for</span> (var i = 0; i &lt; str1.length; i++) &#123;</span><br><span class="line">    str1[i] = str1[i].charAt(0).toUpperCase + str1[i].substring(1);</span><br><span class="line">&#125;</span><br><span class="line">str1.join(<span class="string">''</span>);</span><br><span class="line">console.log(str1);</span><br></pre></td></tr></table></figure>
+
+<h2 id="获取虚拟目录"><a href="#获取虚拟目录" class="headerlink" title="获取虚拟目录"></a>获取虚拟目录</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="function"><span class="title">GetVirtualPath</span></span>() &#123;</span><br><span class="line">    var p = window.location.pathname</span><br><span class="line">    <span class="keyword">if</span> (p.substring(0, 1) != <span class="string">'/'</span>) p = <span class="string">'/'</span> + p</span><br><span class="line">    var str = p.replace(/^[/]\w*[/]/, <span class="string">''</span>) //将虚拟目录从字符串中清除</span><br><span class="line">    <span class="built_in">return</span> p.substring(0, p.length - str.length) //返回虚拟目录</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="日期字符串转时间戳"><a href="#日期字符串转时间戳" class="headerlink" title="日期字符串转时间戳"></a>日期字符串转时间戳</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> strTime(date)&#123;</span><br><span class="line">    date = date.substring(0,19);    </span><br><span class="line">    date = date.replace(/-/g,<span class="string">'/'</span>); </span><br><span class="line">    var timestamp = new Date(date).getTime();</span><br><span class="line">    <span class="built_in">return</span> timestamp;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="返回格式化的当前日期——年"><a href="#返回格式化的当前日期——年" class="headerlink" title="返回格式化的当前日期——年"></a>返回格式化的当前日期——年</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="function"><span class="title">getCurrentY</span></span>() &#123;</span><br><span class="line">    var date = new Date()</span><br><span class="line">    <span class="built_in">return</span> date.getFullYear()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="返回格式化的当前日期——月"><a href="#返回格式化的当前日期——月" class="headerlink" title="返回格式化的当前日期——月"></a>返回格式化的当前日期——月</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="function"><span class="title">getCurrentYM</span></span>() &#123;</span><br><span class="line">    var date = new Date()</span><br><span class="line">    var mm = date.getMonth() + 1</span><br><span class="line">    mm = mm &lt; 10 ? <span class="string">'0'</span> + mm : mm</span><br><span class="line">    <span class="built_in">return</span> date.getFullYear() + mm</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="返回格式化的当前日期——天"><a href="#返回格式化的当前日期——天" class="headerlink" title="返回格式化的当前日期——天"></a>返回格式化的当前日期——天</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="function"><span class="title">getCurrentDate</span></span>() &#123;</span><br><span class="line">    var date = new Date()</span><br><span class="line">    var mm = date.getMonth() + 1</span><br><span class="line">    var dd = date.getDate()</span><br><span class="line">    mm = mm &lt; 10 ? <span class="string">'0'</span> + mm : mm</span><br><span class="line">    dd = dd &lt; 10 ? <span class="string">'0'</span> + dd : dd</span><br><span class="line">    <span class="built_in">return</span> date.getFullYear() + <span class="string">'-'</span> + mm + <span class="string">'-'</span> + dd</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="返回格式化的当前日期-时间"><a href="#返回格式化的当前日期-时间" class="headerlink" title="返回格式化的当前日期-时间"></a>返回格式化的当前日期-时间</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="function"><span class="title">time</span></span>() &#123;</span><br><span class="line">    var t = new Date();</span><br><span class="line">    var hh = t.getHours(),</span><br><span class="line">        min = t.getMinutes(),</span><br><span class="line">        ss = t.getSeconds();</span><br><span class="line">    hh = hh &lt; 10 ? <span class="string">'0'</span> + hh : hh</span><br><span class="line">    min = min &lt; 10 ? <span class="string">'0'</span> + min : min</span><br><span class="line">    ss = ss &lt; 10 ? <span class="string">'0'</span> + ss : ss</span><br><span class="line">    <span class="built_in">return</span> hh + <span class="string">':'</span> + min + <span class="string">":"</span> + ss;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="返回格式化的当前日期"><a href="#返回格式化的当前日期" class="headerlink" title="返回格式化的当前日期"></a>返回格式化的当前日期</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="function"><span class="title">newTime</span></span>() &#123;</span><br><span class="line">    var t = new Date()</span><br><span class="line">    var yy = t.getFullYear(),</span><br><span class="line">        mon = t.getMonth() + 1,</span><br><span class="line">        dd = t.getDate(),</span><br><span class="line">        hh = t.getHours(),</span><br><span class="line">        min = t.getMinutes(),</span><br><span class="line">        ss = t.getSeconds();</span><br><span class="line">    mon = mon &lt; 10 ? <span class="string">"0"</span> + mon : mon;</span><br><span class="line">    dd = dd &lt; 10 ? <span class="string">"0"</span> + dd : dd;</span><br><span class="line">    hh = hh &lt; 10 ? <span class="string">"0"</span> + hh : hh;</span><br><span class="line">    min min &lt; 10 ? <span class="string">"0"</span> + min : min;</span><br><span class="line">    ss = ss &lt; 10 ? <span class="string">"0"</span> + ss : ss;</span><br><span class="line">  <span class="built_in">return</span> yy + <span class="string">'.'</span> + mon + <span class="string">'.'</span> + dd + <span class="string">' '</span> + hh + <span class="string">':'</span> + min + <span class="string">":"</span> + ss;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="时间刷新"><a href="#时间刷新" class="headerlink" title="时间刷新"></a>时间刷新</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">&lt;body onload=<span class="string">"show()"</span>&gt;</span><br><span class="line">&lt;span id=<span class="string">"time"</span>&gt;&lt;/span&gt;</span><br><span class="line"><span class="keyword">function</span> <span class="function"><span class="title">showtime</span></span>() &#123;</span><br><span class="line">    var va = document.getElementById(<span class="string">'time'</span>)</span><br><span class="line">    var tim = new Date()</span><br><span class="line">    var year = tim.getFullYear()</span><br><span class="line">    var mon = tim.getMonth()+1</span><br><span class="line">    var dat = tim.getDate()</span><br><span class="line">    var ho = tim.getHours()</span><br><span class="line">    var mi = tim.getMinutes()</span><br><span class="line">    var se = tim.getSeconds()</span><br><span class="line">    var day = tim.getDay()</span><br><span class="line">    var <span class="built_in">times</span> = year + <span class="string">'年'</span> + mon + <span class="string">'月'</span> + dat + <span class="string">'日'</span> + ho + <span class="string">'时'</span> + mi + <span class="string">'分'</span> + se + <span class="string">'秒'</span> + <span class="string">'星期'</span> + day</span><br><span class="line">    va.innerHTML = <span class="built_in">times</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">function</span> <span class="function"><span class="title">show</span></span>() &#123;</span><br><span class="line">    window.setInterval(showtime, 1000)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="校验是否全由数字组成"><a href="#校验是否全由数字组成" class="headerlink" title="校验是否全由数字组成"></a>校验是否全由数字组成</h2><p>参数：s输入的字符串。 返回：返回bool类型</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> isDigit(s) &#123;</span><br><span class="line">    var patrn = /^[0-9]&#123;1,20&#125;$/</span><br><span class="line">    <span class="keyword">if</span> (!patrn.exec(s)) <span class="built_in">return</span> <span class="literal">false</span></span><br><span class="line">    <span class="built_in">return</span> <span class="literal">true</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="校验是否全由字符组成"><a href="#校验是否全由字符组成" class="headerlink" title="校验是否全由字符组成"></a>校验是否全由字符组成</h2><p>参数：s输入的字符串。 返回：返回bool类型</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> isChar(s) &#123;</span><br><span class="line">    var patrn = /^[A-Za-z]&#123;1,20&#125;$/</span><br><span class="line">    <span class="keyword">if</span> (!patrn.exec(s)) <span class="built_in">return</span> <span class="literal">false</span></span><br><span class="line">    <span class="built_in">return</span> <span class="literal">true</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="校验是否包含特殊符号"><a href="#校验是否包含特殊符号" class="headerlink" title="校验是否包含特殊符号"></a>校验是否包含特殊符号</h2><p>参数：s输入的字符串。  返回：返回bool类型</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> isSign(s) &#123;</span><br><span class="line">    var patrn = /^[A-Za-z0-9|@]&#123;1,20&#125;$/</span><br><span class="line">    <span class="keyword">if</span> (!patrn.exec(s)) <span class="built_in">return</span> <span class="literal">true</span></span><br><span class="line">    <span class="built_in">return</span> <span class="literal">false</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="封装公用函数的模块"><a href="#封装公用函数的模块" class="headerlink" title="封装公用函数的模块"></a>封装公用函数的模块</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(!window.lt)&#123;</span><br><span class="line">    /*如果已经存在lt全局对象变量*/</span><br><span class="line">    /*如果不存在lt才需要定义一个空对象*/</span><br><span class="line">    lt = &#123;&#125;;</span><br><span class="line">&#125;</span><br><span class="line">lt.getParamsByUrl = <span class="function"><span class="title">function</span></span> () &#123;</span><br><span class="line">    /*1. 获取地址栏参数*/</span><br><span class="line">    /*例如  ?key=123&amp;name=10 */</span><br><span class="line">    /*获取  &#123;key:123,name:10&#125;*/</span><br><span class="line">    var search = location.search;</span><br><span class="line">    var params = &#123;&#125;;</span><br><span class="line">    <span class="keyword">if</span>(search)&#123;</span><br><span class="line">        /*去除第一个问号*/</span><br><span class="line">        search = search.replace(/^\?/,<span class="string">''</span>);</span><br><span class="line">        <span class="keyword">if</span>(search)&#123;</span><br><span class="line">            var arr = search.split(<span class="string">'&amp;'</span>);</span><br><span class="line">            /*arr [<span class="string">'key=123'</span>,<span class="string">'name=10'</span>]*/</span><br><span class="line">            arr.forEach(<span class="keyword">function</span> (item,i) &#123;</span><br><span class="line">                /*item <span class="string">'key=123'</span>*/</span><br><span class="line">                /*item <span class="string">'name=10'</span>*/</span><br><span class="line">                var itemArr = item.split(<span class="string">'='</span>);</span><br><span class="line">                /*itemArr [<span class="string">'key'</span>,<span class="string">'123'</span>]*/</span><br><span class="line">                params[itemArr[0]] = decodeURIComponent(itemArr[1]);</span><br><span class="line">            &#125;);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">return</span> params;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h2 id="封装公用url属性的模块"><a href="#封装公用url属性的模块" class="headerlink" title="封装公用url属性的模块"></a>封装公用url属性的模块</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">1、创建app.js文件，url以键值对形式存入对象，并暴露给window</span><br><span class="line">$(<span class="function"><span class="title">function</span></span> () &#123;</span><br><span class="line">    document.domain = <span class="string">'127.0.0.1'</span>;</span><br><span class="line">    var user = $.cookie(<span class="string">'UserName'</span>) || <span class="string">'admin'</span>;</span><br><span class="line">    var pmUrl = <span class="string">'http://java.mes.xfmgroup.com:8065/'</span>;</span><br><span class="line">    var spinUrl = <span class="string">'http://java.mes.xfmgroup.com:8044/'</span>;</span><br><span class="line">    var inventUrl = <span class="string">'http://192.168.118.61/WebService/MV/ERP.Api/mv/mb/erp/'</span>;</span><br><span class="line">    var usePms = <span class="literal">true</span>;</span><br><span class="line"></span><br><span class="line">    var appRoot = &#123;</span><br><span class="line">        url: &#123;</span><br><span class="line">            pmUrl: pmUrl,</span><br><span class="line">            spinCalcUrl: spinUrl + <span class="string">'unitService/SuUnitInoutDatas/operations/calculate'</span>,</span><br><span class="line">            pmWorkShopsUrl: inventUrl +<span class="string">'plantModel/workshop/'</span> + user,</span><br><span class="line">        &#125;,</span><br><span class="line">        usePms: usePms,</span><br><span class="line">        currentUser: user</span><br><span class="line">    &#125;</span><br><span class="line">    window.AppRoot = appRoot;</span><br><span class="line">&#125;);</span><br><span class="line">2、使用时引入app.js,在需要的js文件中直接使用AppRoot.url.xxx访问</span><br><span class="line">$.ajax(&#123;</span><br><span class="line">    <span class="built_in">type</span>: <span class="string">"GET"</span>,</span><br><span class="line">    url: AppRoot.pmUrl + <span class="string">'pm/sMtrl/'</span> + stockId,</span><br><span class="line">    success: <span class="keyword">function</span> (data) &#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<h2 id="实现跨浏览器打开链接"><a href="#实现跨浏览器打开链接" class="headerlink" title="实现跨浏览器打开链接"></a>实现跨浏览器打开链接</h2><p>有两种方式可以实现，一是注册自定义协议(Registering an Custom Protocal)实现，二是通过桌面服务间接操作。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">注册自定义协议实现方法：</span><br><span class="line">如何注册自定义协议可以参考 Registering an Application to a URI Scheme</span><br><span class="line">需要先注册，注册一个openIE和openCHROME，可以看这个注册表文件 ，双击安装.reg注册表文件就可以实现。</span><br><span class="line">使用&lt;a href=”openIE:https://bing.com”&gt;使用IE浏览器打开bing&lt;/a&gt;或 &lt;a href=”openCHROME:https://bing.com”&gt;使用CHROME浏览器打开bing&lt;/a&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="历史管理对象-H5历史记录"><a href="#历史管理对象-H5历史记录" class="headerlink" title="历史管理对象( H5历史记录)"></a>历史管理对象( H5历史记录)</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"> history.back();</span><br><span class="line">history.forward();</span><br><span class="line">history.go(n);</span><br><span class="line">history.pushState();追加一条新的历史记录</span><br><span class="line">history.repalceState();替换一条历史记录</span><br></pre></td></tr></table></figure>
+
+<h2 id="a标签中的href属性可以写javaScript代码"><a href="#a标签中的href属性可以写javaScript代码" class="headerlink" title="a标签中的href属性可以写javaScript代码"></a>a标签中的href属性可以写javaScript代码</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">不执行：&lt;a href=”javascript:;”&gt;&lt;/a&gt;</span><br><span class="line">执  行：&lt;a href=”javascript:history.back();”&gt;&lt;/a&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="location"><a href="#location" class="headerlink" title="location"></a>location</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">JS中跳转到其他页面</span><br><span class="line">location.href=”../.././xxx.html”;</span><br><span class="line">获取地址栏中get请求参数</span><br><span class="line">location.search</span><br><span class="line">注意特殊字符&amp;和中文乱码问题，解决需要进行转码。</span><br><span class="line">解码：decodeURIComponent(值);</span><br><span class="line">转码：encode URIComponent(值);</span><br></pre></td></tr></table></figure>
+
+<h2 id="img标签加载失败加载默认图片"><a href="#img标签加载失败加载默认图片" class="headerlink" title="img标签加载失败加载默认图片"></a>img标签加载失败加载默认图片</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"> 当触发图片加载失败事件onerror  ,替换当前src为默认图地址,onload为当触发图片加载成功事件</span><br><span class="line">&lt;img src=”路径”alt=“搜索引擎信息描述”title=“” height=“不加px” width=“不加px” onerror=“this.src=‘路径’”&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="art-template模版引擎的使用"><a href="#art-template模版引擎的使用" class="headerlink" title="art-template模版引擎的使用"></a>art-template模版引擎的使用</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">使用步骤如下：</span><br><span class="line">1、在需要的html页面中引入art-templte.js文件</span><br><span class="line">2、在需要的html页面中定义模版，如下定义</span><br><span class="line">   &lt;ul&gt;&lt;/ul&gt;</span><br><span class="line">   &lt;script <span class="built_in">type</span>=<span class="string">"text/template"</span> id=<span class="string">"top"</span>&gt;</span><br><span class="line">       &#123;&#123;each rows&#125;&#125;</span><br><span class="line">          &lt;li class=<span class="string">"&#123;&#123;<span class="variable">$index</span>==0?'now':''&#125;&#125;"</span>&gt;&lt;a href=<span class="string">"javascript:;"</span>&gt;&#123;&#123;<span class="variable">$value</span>.categoryName&#125;&#125;&lt;/a&gt;&lt;/li&gt;</span><br><span class="line">       &#123;&#123;/each&#125;&#125;  </span><br><span class="line">   &lt;/script&gt;</span><br><span class="line">3、在相应页面对应的js文件中ajax中定义</span><br><span class="line">$.ajax(&#123;</span><br><span class="line">  <span class="built_in">type</span>: <span class="string">"get"</span>,</span><br><span class="line">  url: <span class="string">"……"</span>,</span><br><span class="line">  data: &#123;&#125;,</span><br><span class="line">  dataType: <span class="string">"json"</span>,</span><br><span class="line">  success: <span class="keyword">function</span>(data)&#123;</span><br><span class="line">    //var html = template(<span class="string">"模版ID"</span>,<span class="string">"数据"</span>);</span><br><span class="line">    var html = template（<span class="string">"top"</span>,data）</span><br><span class="line">    $(ul).html(html)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<h2 id="表单"><a href="#表单" class="headerlink" title="表单"></a>表单</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">表单元素重置方法：form.reset();</span><br><span class="line">表单元素提交方法：form.submit();</span><br><span class="line">设置表单内元素是否有自动填充功能：autocomplete=<span class="string">"off"</span></span><br><span class="line">H5输入框的非空校验：required有兼容性</span><br><span class="line">表单提交按钮&lt;button <span class="built_in">type</span>=”submit”&gt;提交&lt;/button&gt;点击按钮自动提交表单数据，现在自己绑定提交事件，需要禁止自动提交表单数据功能需要js代码e.preventDefault();阻止默认的form提交。</span><br><span class="line">初始化校验插件：表单提交需要在form表单中有submit类型按钮才行。如果submit类型按钮没在form表单中无法提交form表单，此时form元素提供id属性，外部submit类型按钮提供form属性，属性值为from表单id值，即可提交from表单。</span><br></pre></td></tr></table></figure>
+
+<h2 id="Bootstarp"><a href="#Bootstarp" class="headerlink" title="Bootstarp"></a>Bootstarp</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bootstarp（3.x版本）需要依赖的jQuery版本必须在1.9.1版本以上（包括1.9.1版本）。</span><br></pre></td></tr></table></figure>
+
+<p>li绑定事件，li动态生成，需要使用事件委派<br>left.on(‘click’,’li’,function(){})</p>
+<h2 id="jQuery问题"><a href="#jQuery问题" class="headerlink" title="jQuery问题"></a>jQuery问题</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">IE低版本不支持直接使用trim()方法去空,jQuery封装了一个工具方法$.trim()，去除字符串两边的空格，$.trim(值)</span><br><span class="line">合并对象函数$.extend(a,b)</span><br><span class="line">jQuery表单序列化方法</span><br><span class="line">$(‘from’).serialize();要求input有name属性</span><br><span class="line">$(‘from’).serializeArryay()；要求input有name属性</span><br><span class="line">使用jQuery绑定事件时，如果出现事件重复绑定可使用off（）解绑在使用on()绑定，如下：</span><br><span class="line"><span class="variable">$xx</span>.off(‘click’,’li’).on(‘click’,’li’,<span class="function"><span class="title">function</span></span>()&#123;&#125;)</span><br></pre></td></tr></table></figure>
+
+<h2 id="移动端框架【mui】"><a href="#移动端框架【mui】" class="headerlink" title="移动端框架【mui】"></a>移动端框架【mui】</h2><p>注意：mui框架的区域滚动组件的内容不支持click事件，只能用tap<br>vue移动端框架【mint-ui】</p>
+<h2 id="width-50-不能一行显示"><a href="#width-50-不能一行显示" class="headerlink" title="width:50%;不能一行显示"></a>width:50%;不能一行显示</h2><li></li>
+<li></li>
+设置display:line-block;width:50%;不能一行显示，回车+tab显示空格，空格占宽度，需要设置font-size：0；
+
+<h2 id="JS语句优化"><a href="#JS语句优化" class="headerlink" title="JS语句优化"></a>JS语句优化</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span>、缩短条件语句</span><br><span class="line">	<span class="keyword">if</span>(available)&#123;addToCard()&#125; </span><br><span class="line">	优化为</span><br><span class="line">	available&amp;&amp;addToCard()</span><br><span class="line"><span class="number">2</span>、动态属性名</span><br><span class="line">	<span class="keyword">const</span> dynamic = <span class="string">'flavour'</span>;</span><br><span class="line">	<span class="keyword">var</span> item = &#123;</span><br><span class="line">    	name: <span class="string">'Coke'</span>,</span><br><span class="line">        [dynamic]: <span class="string">'Cherry'</span></span><br><span class="line">	&#125;</span><br><span class="line">    <span class="built_in">console</span>.log(item);</span><br><span class="line"><span class="number">3</span>、展平多维数组</span><br><span class="line">	<span class="keyword">var</span> entries = [<span class="number">1</span>,[<span class="number">2</span>,<span class="number">5</span>],[<span class="number">6</span>,<span class="number">7</span>],<span class="number">9</span>];</span><br><span class="line">	<span class="keyword">var</span> flat_entries = [].contac(...entries);</span><br><span class="line">	<span class="comment">//[1,2,5,6,7,9]</span></span><br><span class="line"><span class="number">4</span>、随机排列数组中元素</span><br><span class="line">	<span class="keyword">var</span> my_list = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>];</span><br><span class="line">	<span class="built_in">console</span>.log(my_list.sort(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    	<span class="keyword">return</span> <span class="built_in">Math</span>.random()<span class="number">-0.5</span></span><br><span class="line">	&#125;));</span><br></pre></td></tr></table></figure>
+
+<h2 id="简单实现双向数据绑定"><a href="#简单实现双向数据绑定" class="headerlink" title="简单实现双向数据绑定"></a>简单实现双向数据绑定</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&lt;input id=<span class="string">'input'</span>/&gt;</span><br><span class="line">    </span><br><span class="line"><span class="keyword">const</span> data = &#123;&#125;;</span><br><span class="line"><span class="keyword">const</span> input = <span class="built_in">document</span>.getElementById(<span class="string">'input'</span>);</span><br><span class="line"><span class="built_in">Object</span>.defineProperty(data,<span class="string">'text'</span>,&#123;</span><br><span class="line">    <span class="keyword">set</span>(value) &#123;</span><br><span class="line">        input.value = value;</span><br><span class="line">        <span class="keyword">this</span>.vaule = value;</span><br><span class="line">    &#125; </span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">input.onChange = <span class="function"><span class="keyword">function</span>(<span class="params">e</span>) </span>&#123;</span><br><span class="line">    data.text = e.target.value;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="点击容器内图标，图标边框为1px-solid-red-点击空白处重置"><a href="#点击容器内图标，图标边框为1px-solid-red-点击空白处重置" class="headerlink" title="点击容器内图标，图标边框为1px solid red;点击空白处重置"></a>点击容器内图标，图标边框为1px solid red;点击空白处重置</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> box = <span class="built_in">document</span>.getElementById(<span class="string">'box'</span>);</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">isIcon</span>(<span class="params">target</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> target.className.includes(<span class="string">'icon'</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">box.onClick = <span class="function"><span class="keyword">function</span>(<span class="params">e</span>) </span>&#123;</span><br><span class="line">    e.stopPropagation();</span><br><span class="line">    <span class="keyword">const</span> target = e.target;</span><br><span class="line">    <span class="keyword">if</span>(isIcon(target)) &#123;</span><br><span class="line">        target.style.border = <span class="string">'1px solid red'</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> doc = <span class="built_in">document</span>;</span><br><span class="line">doc.onClick = <span class="function"><span class="keyword">function</span>(<span class="params">e</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">const</span> children = box.children;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">let</span> i; i&lt;children.length; i++) &#123;</span><br><span class="line">        <span class="keyword">if</span>(isIcon(children[i])) &#123;</span><br><span class="line">        children[i].style.border = <span class="string">'none'</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+    </div>
+    
+    <div class="post-footer">
+        <div>
+            
+                转载声明：商业转载请联系作者获得授权,非商业转载请注明出处 © <a href="" target="_blank">Snippet</a>
+            
+        </div>
+        <div>
+            
+        </div>
+    </div>
+</article>
+
+<div class="article-nav prev-next-wrap clearfix">
+    
+        <a href="/2020/01/03/5概念定义/" class="pre-post btn btn-default" title='概念定义'>
+            <i class="fa fa-angle-left fa-fw"></i><span class="hidden-lg">上一篇</span>
+            <span class="hidden-xs">概念定义</span>
+        </a>
+    
+    
+        <a href="/2020/01/03/3CSS归纳/" class="next-post btn btn-default" title='CSS归纳'>
+            <span class="hidden-lg">下一篇</span>
+            <span class="hidden-xs">CSS归纳</span><i class="fa fa-angle-right fa-fw"></i>
+        </a>
+    
+</div>
+
+
+    <div id="comments">
+        
+	
+    <div id="vcomments" class="valine"></div>
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="/assets/valine.min.js"></script>
+
+    <script>
+        new Valine({
+            av: AV,
+            el: '#vcomments',
+            appId: 'xOKV9J4UeQAtVkvnJC7Kq2Jn-gzGzoHsz',
+            appKey: 'erIpQac4azoCmgfBB7Dl9maa',
+            placeholder: '说点什么吧',
+            notify: false,
+            verify: true,
+            avatar: 'mm',
+            meta: 'nick,mail'.split(','),
+            pageSize: '10',
+            path: window.location.pathname,
+            lang: 'zh-CN'.toLowerCase()
+        })
+    </script>
+
+
+    </div>
+
+
+
+
+
+                </main>
+                
+                    <aside id="article-toc" role="navigation" class="col-md-4">
+    <div class="widget">
+        <h3 class="title">文章目录</h3>
+        
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#js文件添加版本号"><span class="toc-text">js文件添加版本号</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#屏幕分辨率"><span class="toc-text">屏幕分辨率</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#方法支持的检测"><span class="toc-text">方法支持的检测</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#IE问题"><span class="toc-text">IE问题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#版本判断"><span class="toc-text">版本判断</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#兼容性"><span class="toc-text">兼容性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#API的变化"><span class="toc-text">API的变化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#get请求缓存"><span class="toc-text">get请求缓存</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#请求乱码"><span class="toc-text">请求乱码</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#创建对象"><span class="toc-text">创建对象</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#手动封装一个new运算符"><span class="toc-text">手动封装一个new运算符</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#继承"><span class="toc-text">继承</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#递归"><span class="toc-text">递归</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#阻止默认事件"><span class="toc-text">阻止默认事件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#阻止冒泡"><span class="toc-text">阻止冒泡</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#判断数组是否为空"><span class="toc-text">判断数组是否为空</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#转换布尔值的情况"><span class="toc-text">转换布尔值的情况</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#jQuery追加删除元素"><span class="toc-text">jQuery追加删除元素</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#编写jQuery插件"><span class="toc-text">编写jQuery插件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#JS-函数有-4-个内置方法："><span class="toc-text">JS 函数有 4 个内置方法：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#toString-NaN"><span class="toc-text">toString()</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#call-、apply-、bind"><span class="toc-text">call()、apply()、bind()</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#冒泡排序"><span class="toc-text">冒泡排序</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#数组去重"><span class="toc-text">数组去重</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#回文字符判断-字符串翻转"><span class="toc-text">回文字符判断_字符串翻转</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#驼峰大写转换"><span class="toc-text">驼峰大写转换</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#获取虚拟目录"><span class="toc-text">获取虚拟目录</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#日期字符串转时间戳"><span class="toc-text">日期字符串转时间戳</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#返回格式化的当前日期——年"><span class="toc-text">返回格式化的当前日期——年</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#返回格式化的当前日期——月"><span class="toc-text">返回格式化的当前日期——月</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#返回格式化的当前日期——天"><span class="toc-text">返回格式化的当前日期——天</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#返回格式化的当前日期-时间"><span class="toc-text">返回格式化的当前日期-时间</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#返回格式化的当前日期"><span class="toc-text">返回格式化的当前日期</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#时间刷新"><span class="toc-text">时间刷新</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#校验是否全由数字组成"><span class="toc-text">校验是否全由数字组成</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#校验是否全由字符组成"><span class="toc-text">校验是否全由字符组成</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#校验是否包含特殊符号"><span class="toc-text">校验是否包含特殊符号</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#封装公用函数的模块"><span class="toc-text">封装公用函数的模块</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#封装公用url属性的模块"><span class="toc-text">封装公用url属性的模块</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#实现跨浏览器打开链接"><span class="toc-text">实现跨浏览器打开链接</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#历史管理对象-H5历史记录"><span class="toc-text">历史管理对象( H5历史记录)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#a标签中的href属性可以写javaScript代码"><span class="toc-text">a标签中的href属性可以写javaScript代码</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#location"><span class="toc-text">location</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#img标签加载失败加载默认图片"><span class="toc-text">img标签加载失败加载默认图片</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#art-template模版引擎的使用"><span class="toc-text">art-template模版引擎的使用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#表单"><span class="toc-text">表单</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Bootstarp"><span class="toc-text">Bootstarp</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#jQuery问题"><span class="toc-text">jQuery问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#移动端框架【mui】"><span class="toc-text">移动端框架【mui】</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#width-50-不能一行显示"><span class="toc-text">width:50%;不能一行显示</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#JS语句优化"><span class="toc-text">JS语句优化</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#简单实现双向数据绑定"><span class="toc-text">简单实现双向数据绑定</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#点击容器内图标，图标边框为1px-solid-red-点击空白处重置"><span class="toc-text">点击容器内图标，图标边框为1px solid red;点击空白处重置</span></a></li></ol>
+        
+    </div>
+</aside>
+
+                
+            </div>
+        </div>
+    </section>
+    <footer class="main-footer">
+    <div class="container">
+        <div class="row">
+        </div>
+    </div>
+</footer>
+
+<a id="back-to-top" class="icon-btn hide">
+	<i class="fa fa-chevron-up"></i>
+</a>
+
+
+
+
+    <div class="copyright">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="busuanzi">
+    
+</div>
+
+            </div>
+            <div class="col-sm-12">
+                <span>Copyright &copy; 2017
+                </span> |
+                <span>
+                    Powered by <a href="//hexo.io" class="copyright-links" target="_blank" rel="nofollow">Hexo</a>
+                </span> |
+                <span>
+                    Theme by <a href="//github.com/shenliyang/hexo-theme-snippet.git" class="copyright-links" target="_blank" rel="nofollow">Snippet</a>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+<script src="/js/app.js?rev=@@hash"></script>
+
+</body>
+</html>

@@ -18,10 +18,10 @@
     <link rel="dns-prefetch" href="http://yoursite.com">
     <!--SEO-->
 
-    <meta name="keywords" content>
+    <meta name="keywords" content="github、ssh密钥">
 
 
-    <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any ...">
+    <meta name="description" content="基本介绍123451、ssh密钥简单来说就是一对用来连接本地仓库git和远程仓库github的钥匙；2、如果需要把代码从本地仓库上传到远程仓库，需要在本机生成一对私钥和公钥，私钥放在本机，公钥放...">
 
 
 
@@ -33,7 +33,7 @@
     <!--Title-->
 
 
-<title>Hello World | 前端小白有话说</title>
+<title>密钥的生成与使用 | 前端小白有话说</title>
 
 
     <link rel="alternate" href="/atom.xml" title="前端小白有话说" type="application/atom+xml">
@@ -138,16 +138,16 @@
                     <p id="process"></p>
 <article class="post">
     <div class="post-head">
-        <h1 id="Hello World">
+        <h1 id="密钥的生成与使用">
             
-	            Hello World
+	            密钥的生成与使用
             
         </h1>
         <div class="post-meta">
     
         <span class="categories-meta fa-wrap">
             <i class="fa fa-folder-open-o"></i>
-            
+            <a class="category-link" href="/categories/工具/">工具</a>
         </span>
     
 
@@ -155,6 +155,8 @@
         <span class="fa-wrap">
             <i class="fa fa-tags"></i>
             <span class="tags-meta">
+                
+                    <a class="tag-link" href="/tags/github、ssh密钥/">github、ssh密钥</a>
                 
             </span>
         </span>
@@ -164,7 +166,7 @@
         
         <span class="fa-wrap">
             <i class="fa fa-clock-o"></i>
-            <span class="date-meta">2019/12/16</span>
+            <span class="date-meta">2020/01/04</span>
         </span>
         
     
@@ -174,19 +176,19 @@
     </div>
     
     <div class="post-body post-content">
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+        <h2 id="基本介绍"><a href="#基本介绍" class="headerlink" title="基本介绍"></a>基本介绍</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">1、ssh密钥简单来说就是一对用来连接本地仓库git和远程仓库github的钥匙；</span><br><span class="line"></span><br><span class="line">2、如果需要把代码从本地仓库上传到远程仓库，需要在本机生成一对私钥和公钥，私钥放在本机，公钥放到对应的github远程仓库中；</span><br><span class="line"></span><br><span class="line">3、还有一个好处是github添加ssh公钥后，以后使用git <span class="built_in">clone</span>的时候，就不需要在重复输入密码了。</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<h2 id="查看密钥"><a href="#查看密钥" class="headerlink" title="查看密钥"></a>查看密钥</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">1、ssh密钥生成之前，需要在本机查看是否存在。</span><br><span class="line"></span><br><span class="line">2、桌面打开git窗口，输入：<span class="built_in">cd</span> ~/.ssh</span><br><span class="line"></span><br><span class="line">3、如果能进入到.ssh文件目录下 ，证明之前生成过.ssh秘钥，可以直接使用里面的秘钥，将SSH添加到github。</span><br><span class="line">Administrator@G2CY72YFEDT2QHI MINGW64 ~/Desktop</span><br><span class="line">$ <span class="built_in">cd</span> ~/.ssh</span><br><span class="line">Administrator@G2CY72YFEDT2QHI MINGW64 ~/.ssh</span><br><span class="line">$ </span><br><span class="line"></span><br><span class="line">4、如果不能进入到.ssh文件目录下 ，证明之前没生成过.ssh秘钥，不存在密钥需要重新生成。</span><br><span class="line">99327@LAPTOP-FH6QDHOE MINGW64 ~/Desktop</span><br><span class="line">$ <span class="built_in">cd</span> ~/.ssh</span><br><span class="line">bash: <span class="built_in">cd</span>: /c/Users/99327/.ssh: No such file or directory</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<h2 id="不存在密钥情况下"><a href="#不存在密钥情况下" class="headerlink" title="不存在密钥情况下"></a>不存在密钥情况下</h2><h4 id="检测自己的配置"><a href="#检测自己的配置" class="headerlink" title="检测自己的配置"></a>检测自己的配置</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">检测下自己之前有没有配置git config user.name和git config user.email这两个命令</span><br><span class="line">直接分别输入这两个命令即可</span><br><span class="line">如果之前没有创建，则执行以下命令创建：</span><br><span class="line">git config –global user.name ‘xxxxx’ </span><br><span class="line">git config –global user.email ‘xxx@xx.xxx’</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<h4 id="生成秘钥"><a href="#生成秘钥" class="headerlink" title="生成秘钥"></a>生成秘钥</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C ‘上面的邮箱’</span><br><span class="line">接着出现需要填写的3个命令按回车即可</span><br><span class="line">最后在.ssh目录下得到了两个文件：id_rsa（私有秘钥）和id_rsa.pub（公有密钥）</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+<h2 id="将SSH添加到github"><a href="#将SSH添加到github" class="headerlink" title="将SSH添加到github"></a>将SSH添加到github</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">github上打开setting-&gt;SSH keys，点击右上角 New SSH key，</span><br><span class="line">把[c盘-&gt;用户-&gt;自己的用户名-&gt;.ssh]目录下生成好的公钥<span class="string">"id_rsa.pub"</span>文件以文本打开</span><br><span class="line">复制放进 key输入框中，再为当前的key起一个title来区分每个key。</span><br></pre></td></tr></table></figure>
+
+<h2 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">在命令窗口上输入    ssh -T git@github.com  按回车键，如看到以下信息，那么就完美了。</span><br><span class="line"><span class="string">"Hi 007xiaoyang! You've successfully authenticated, but GitHub does not provide s hell access."</span></span><br></pre></td></tr></table></figure>
+
+<p>参考链接: <a href="https://blog.csdn.net/lucky__yang/article/details/80148420" target="_blank" rel="noopener">生成SSH秘钥连接github（详细教程）</a></p>
 
     </div>
     
@@ -204,11 +206,16 @@
 
 <div class="article-nav prev-next-wrap clearfix">
     
-        <a href="/2020/01/03/1前端简介/" class="pre-post btn btn-default" title='前端简介'>
+        <a href="/2020/01/05/10网址大全/" class="pre-post btn btn-default" title='常用网址'>
             <i class="fa fa-angle-left fa-fw"></i><span class="hidden-lg">上一篇</span>
-            <span class="hidden-xs">前端简介</span>
+            <span class="hidden-xs">常用网址</span>
         </a>
     
+    
+        <a href="/2020/01/03/7个人博客搭建教程/" class="next-post btn btn-default" title='个人博客搭建教程'>
+            <span class="hidden-lg">下一篇</span>
+            <span class="hidden-xs">个人博客搭建教程</span><i class="fa fa-angle-right fa-fw"></i>
+        </a>
     
 </div>
 
@@ -250,7 +257,7 @@
     <div class="widget">
         <h3 class="title">文章目录</h3>
         
-            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Quick-Start"><span class="toc-text">Quick Start</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Create-a-new-post"><span class="toc-text">Create a new post</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Run-server"><span class="toc-text">Run server</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Generate-static-files"><span class="toc-text">Generate static files</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Deploy-to-remote-sites"><span class="toc-text">Deploy to remote sites</span></a></li></ol></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#基本介绍"><span class="toc-text">基本介绍</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#查看密钥"><span class="toc-text">查看密钥</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#不存在密钥情况下"><span class="toc-text">不存在密钥情况下</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#检测自己的配置"><span class="toc-text">检测自己的配置</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#生成秘钥"><span class="toc-text">生成秘钥</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#将SSH添加到github"><span class="toc-text">将SSH添加到github</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#测试"><span class="toc-text">测试</span></a></li></ol>
         
     </div>
 </aside>

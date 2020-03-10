@@ -21,7 +21,7 @@
     <meta name="keywords" content>
 
 
-    <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any ...">
+    <meta name="description" content="computed和watch区别12computed:计算属性,只要有一个属性变化，就会自动重新进行计算，在页面上，计算属性和属性使用方式一样。watch:监听属性，需要监听这个属性所有依赖要素...">
 
 
 
@@ -33,7 +33,7 @@
     <!--Title-->
 
 
-<title>Hello World | 前端小白有话说</title>
+<title>Vue | 前端小白有话说</title>
 
 
     <link rel="alternate" href="/atom.xml" title="前端小白有话说" type="application/atom+xml">
@@ -138,16 +138,16 @@
                     <p id="process"></p>
 <article class="post">
     <div class="post-head">
-        <h1 id="Hello World">
+        <h1 id="Vue">
             
-	            Hello World
+	            Vue
             
         </h1>
         <div class="post-meta">
     
         <span class="categories-meta fa-wrap">
             <i class="fa fa-folder-open-o"></i>
-            
+            <a class="category-link" href="/categories/前端/">前端</a>
         </span>
     
 
@@ -164,7 +164,7 @@
         
         <span class="fa-wrap">
             <i class="fa fa-clock-o"></i>
-            <span class="date-meta">2019/12/16</span>
+            <span class="date-meta">2020/02/24</span>
         </span>
         
     
@@ -174,19 +174,15 @@
     </div>
     
     <div class="post-body post-content">
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+        <h2 id="computed和watch区别"><a href="#computed和watch区别" class="headerlink" title="computed和watch区别"></a>computed和watch区别</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">computed:计算属性,只要有一个属性变化，就会自动重新进行计算，在页面上，计算属性和属性使用方式一样。</span><br><span class="line">watch:监听属性，需要监听这个属性所有依赖要素的变化，根据变化重置这个值。</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<h2 id="vue-router"><a href="#vue-router" class="headerlink" title="vue-router"></a>vue-router</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">1、vue-router的导航钩子包括如下3种：</span><br><span class="line">	1)全局导航钩子</span><br><span class="line">		router.beforeEach(to,from,next)</span><br><span class="line">		router.beforeResolve(to,from,next)</span><br><span class="line">		router.afterEach(to,from,next)</span><br><span class="line">	2)组件内钩子</span><br><span class="line">		beforeRouterEnter</span><br><span class="line">		beforeRouterUpdate</span><br><span class="line">		beforeRouterLeave</span><br><span class="line">	3)单独路由独享组件</span><br><span class="line">		beforeEnter</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<h2 id="vue进阶"><a href="#vue进阶" class="headerlink" title="vue进阶"></a>vue进阶</h2><p>从0到1搭建UI组件库</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">封装常用的功能性组件</span><br><span class="line">把组件封装成UI组件库并发布到npm</span><br><span class="line">.self修饰符</span><br><span class="line">.sync修饰符是一个语法糖，两句代码的缩写</span><br><span class="line">深度选择器在vue-loader中提到</span><br><span class="line">css &gt;&gt;&gt;</span><br><span class="line">less /deep/</span><br><span class="line">scss ::v-deep</span><br><span class="line">v-model语法糖相当于:value=<span class="string">"user"</span> @input=<span class="string">"<span class="variable">$event</span>.target.value"</span></span><br><span class="line">//数据修改后，等待DOM跟新，在进行修改</span><br><span class="line">await this.<span class="variable">$nextTick</span>()</span><br><span class="line">修改方法</span><br><span class="line"><span class="function"><span class="title">created</span></span>()&#123;this.<span class="variable">$parent</span>&#125;</span><br><span class="line">provide和inject</span><br><span class="line">provide父组件注入</span><br><span class="line">provide:&#123;<span class="string">"foo"</span>:<span class="string">"bar"</span>&#125;</span><br><span class="line"><span class="function"><span class="title">provide</span></span>() &#123;</span><br><span class="line">	<span class="built_in">return</span> radioGroup:this</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">inject子组件接受</span><br><span class="line">inject:[<span class="string">'foo'</span>]</span><br><span class="line">inject: &#123;</span><br><span class="line">	radioGroup: &#123;</span><br><span class="line">		default:<span class="string">""</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">3、Vue-cli</span><br><span class="line">vue脚手架工具，用于初始化vue项目。</span><br><span class="line">npm install -g vue-cli</span><br><span class="line">vue init webpack my-project</span><br><span class="line"><span class="built_in">cd</span> my-project</span><br><span class="line">npm i</span><br><span class="line">npm run dev</span><br><span class="line">vuex 数据流</span><br><span class="line">为什么会存在组件不能通信？简单粗暴的回答就是，变量的作用域导致的，vue的每一个组件都有自己的生命周期，都是独立存在的个体。vuex就是在根组件创建一个叫state的全局变量，让不同组件共享这个变量，并且定义了一系列方法和规范，也就是action、mutation等等，去统一触发这个全局变量也就是state。</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<h2 id="Vue插件"><a href="#Vue插件" class="headerlink" title="Vue插件"></a>Vue插件</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">prettier：代码格式器</span><br><span class="line">cssfx：让广大Vue友快速使用相关button动效。</span><br><span class="line">网站: https://cssfx.dev</span><br><span class="line">GitHub: https://github.com/jolaleye/cssfx</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
 
     </div>
     
@@ -204,11 +200,11 @@
 
 <div class="article-nav prev-next-wrap clearfix">
     
-        <a href="/2020/01/03/1前端简介/" class="pre-post btn btn-default" title='前端简介'>
-            <i class="fa fa-angle-left fa-fw"></i><span class="hidden-lg">上一篇</span>
-            <span class="hidden-xs">前端简介</span>
-        </a>
     
+        <a href="/2020/02/12/18Webpack/" class="next-post btn btn-default" title='Webpack介绍'>
+            <span class="hidden-lg">下一篇</span>
+            <span class="hidden-xs">Webpack介绍</span><i class="fa fa-angle-right fa-fw"></i>
+        </a>
     
 </div>
 
@@ -250,7 +246,7 @@
     <div class="widget">
         <h3 class="title">文章目录</h3>
         
-            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Quick-Start"><span class="toc-text">Quick Start</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Create-a-new-post"><span class="toc-text">Create a new post</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Run-server"><span class="toc-text">Run server</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Generate-static-files"><span class="toc-text">Generate static files</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Deploy-to-remote-sites"><span class="toc-text">Deploy to remote sites</span></a></li></ol></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#computed和watch区别"><span class="toc-text">computed和watch区别</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#vue-router"><span class="toc-text">vue-router</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#vue进阶"><span class="toc-text">vue进阶</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Vue插件"><span class="toc-text">Vue插件</span></a></li></ol>
         
     </div>
 </aside>

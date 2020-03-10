@@ -1,0 +1,432 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.9.0">
+    <!--Setting-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta name="apple-mobile-web-app-capable" content="前端小白有话说">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no,email=no,adress=no">
+    <meta name="browsermode" content="application">
+    <meta name="screen-orientation" content="portrait">
+    <meta name="theme-version" content="1.2.3">
+    <meta name="root" content="/">
+    <link rel="dns-prefetch" href="http://yoursite.com">
+    <!--SEO-->
+
+    <meta name="keywords" content="盒模型、布局、媒体查询、伸缩盒子">
+
+
+    <meta name="description" content="盒子模型123456789101112131415161718191、盒子组成    内容+padding+margin+border    2、盒子大小    内容+padding+borde...">
+
+
+
+<meta name="robots" content="all">
+<meta name="google" content="all">
+<meta name="googlebot" content="all">
+<meta name="verify" content="all">
+
+    <!--Title-->
+
+
+<title>CSS归纳 | 前端小白有话说</title>
+
+
+    <link rel="alternate" href="/atom.xml" title="前端小白有话说" type="application/atom+xml">
+
+
+    <link rel="icon" href="/favicon.ico">
+
+    
+
+
+
+<link rel="stylesheet" href="/css/bootstrap.min.css?rev=3.3.7">
+<link rel="stylesheet" href="/css/font-awesome.min.css?rev=4.5.0">
+<link rel="stylesheet" href="/css/style.css?rev=@@hash">
+
+
+
+
+    
+	<div class="hide">
+		<script type="text/javascript">
+			var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan class='cnzz_stat_icon_1263868967 hide' %3E%3Cscript%20src%3D%22https%3A%2F%2Fs95.cnzz.com%2Fz_stat.php%3Fweb_id%3D1272564536%22%3E%3C%2Fscript%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s19.cnzz.com/z_stat.php%3Fid%3D1263868967%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));
+		</script>
+	</div>
+
+
+
+
+
+
+    
+
+</head>
+
+</html>
+<!--[if lte IE 8]>
+<style>
+    html{ font-size: 1em }
+</style>
+<![endif]-->
+<!--[if lte IE 9]>
+<div style="ie">你使用的浏览器版本过低，为了你更好的阅读体验，请更新浏览器的版本或者使用其他现代浏览器，比如Chrome、Firefox、Safari等。</div>
+<![endif]-->
+
+<body>
+    <header class="main-header"  style="background-image:url(http://snippet.shenliyang.com/img/banner.jpg)"  >
+    <div class="main-header-box">
+        <a class="header-avatar" href="/" title='微微'>
+            <img src="/img/avatar2.jpg" alt="logo头像" class="img-responsive center-block">
+        </a>
+        <div class="branding">
+        	<!--<h2 class="text-hide">Snippet主题,从未如此简单有趣</h2>-->
+            
+                 <img src="/img/branding.png" alt="Snippet 博客主题" class="img-responsive center-block">
+            
+    	</div>
+    </div>
+</header>
+    <nav class="main-navigation">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="navbar-header"><span class="nav-toggle-button collapsed pull-right" data-toggle="collapse" data-target="#main-menu" id="mnav">
+                    <span class="sr-only"></span>
+                        <i class="fa fa-bars"></i>
+                    </span>
+                    <a class="navbar-brand" href="http://yoursite.com">前端小白有话说</a>
+                </div>
+                <div class="collapse navbar-collapse" id="main-menu">
+                    <ul class="menu">
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/"><i class="fa "></i>首页</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/categories/前端/"><i class="fa "></i>前端</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/categories/后端/"><i class="fa "></i>后端</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/categories/工具/"><i class="fa "></i>工具</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/archives/"><i class="fa "></i>时间轴</a>
+                            </li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+    <section class="content-wrap">
+        <div class="container">
+            <div class="row">
+                <main class="col-md-8 main-content m-post">
+                    <p id="process"></p>
+<article class="post">
+    <div class="post-head">
+        <h1 id="CSS归纳">
+            
+	            CSS归纳
+            
+        </h1>
+        <div class="post-meta">
+    
+        <span class="categories-meta fa-wrap">
+            <i class="fa fa-folder-open-o"></i>
+            <a class="category-link" href="/categories/前端/">前端</a>
+        </span>
+    
+
+    
+        <span class="fa-wrap">
+            <i class="fa fa-tags"></i>
+            <span class="tags-meta">
+                
+                    <a class="tag-link" href="/tags/盒模型、布局、媒体查询、伸缩盒子/">盒模型、布局、媒体查询、伸缩盒子</a>
+                
+            </span>
+        </span>
+    
+
+    
+        
+        <span class="fa-wrap">
+            <i class="fa fa-clock-o"></i>
+            <span class="date-meta">2020/01/03</span>
+        </span>
+        
+    
+</div>
+            
+            
+    </div>
+    
+    <div class="post-body post-content">
+        <h2 id="盒子模型"><a href="#盒子模型" class="headerlink" title="盒子模型"></a>盒子模型</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">1、盒子组成</span><br><span class="line">    内容+padding+margin+border</span><br><span class="line">    </span><br><span class="line">2、盒子大小</span><br><span class="line">    内容+padding+border </span><br><span class="line">    </span><br><span class="line">3、padding不会改变盒子的位置，但会改变内容的位置，和盒子大小；</span><br><span class="line"></span><br><span class="line">4、margin改变盒子位置，盒子之间外边距重叠不累计，以最大值为准；</span><br><span class="line"></span><br><span class="line">5、margin特点：垂直外边距合并；</span><br><span class="line">              外边距塌陷：给子元素设置上下边距，父元素也随外边距移动位置。</span><br><span class="line">              解决办法：给父元素设置边框border: 1px;</span><br><span class="line">                      或者给父元素设置overflow: hidden;</span><br><span class="line">                      或者padding-top: 1px; </span><br><span class="line">              </span><br><span class="line">注意：行内元素只能设置左右的内外边距，上下的内外边距不能设置。</span><br><span class="line">     标准盒子模型：宽度=内容(content) + padding + border + margin</span><br><span class="line">     IE低版本盒子模型：宽度=内容(content + padding +border) + margin</span><br></pre></td></tr></table></figure>
+
+<h2 id="CSS单位"><a href="#CSS单位" class="headerlink" title="CSS单位"></a>CSS单位</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">px：固定像素，样式大小不会随页面改变而变化。</span><br><span class="line"></span><br><span class="line">em：相对长度单位，相对于父元素字体大小的单位。</span><br><span class="line"></span><br><span class="line">rem：相对长度单位，相对根元素（html）字体大小的单位，IE9~IE11支持。</span><br><span class="line"></span><br><span class="line">注意：使用rem时，margin、padding数值取父元素宽度进行计算。</span><br></pre></td></tr></table></figure>
+
+<h2 id="CSS路径"><a href="#CSS路径" class="headerlink" title="CSS路径"></a>CSS路径</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"/"</span>  表示根目录</span><br><span class="line"></span><br><span class="line"><span class="string">"./"</span> 表示同级目录</span><br><span class="line"></span><br><span class="line"><span class="string">"../"</span>表示上一级目录</span><br></pre></td></tr></table></figure>
+
+<h2 id="CSS边框"><a href="#CSS边框" class="headerlink" title="CSS边框"></a>CSS边框</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">border</span>: 1<span class="selector-tag">px</span> <span class="selector-tag">solid</span> <span class="selector-id">#ccc</span>;</span><br><span class="line"></span><br><span class="line">边框线样式：<span class="selector-tag">solid</span>、<span class="selector-tag">dashed</span>、<span class="selector-tag">dotted</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="边框圆角"><a href="#边框圆角" class="headerlink" title="边框圆角"></a>边框圆角</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">border-radius</span>: 5<span class="selector-tag">px</span>;                一个值代表4个角</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">border-radius</span>：5<span class="selector-tag">px</span> 10<span class="selector-tag">px</span>;           两个值代表<span class="selector-tag">X</span>角</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">border-radius</span>：2<span class="selector-tag">px</span> 4<span class="selector-tag">px</span> 6<span class="selector-tag">px</span>;        三个值代表<span class="selector-tag">z</span>角</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">border-radius</span>：1<span class="selector-tag">px</span> 3<span class="selector-tag">px</span> 5<span class="selector-tag">px</span> 7<span class="selector-tag">px</span>;    四个值代表口角，顺时针</span><br></pre></td></tr></table></figure>
+
+<h2 id="背景图片"><a href="#背景图片" class="headerlink" title="背景图片"></a>背景图片</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">路径： background-image: url("路径") | none;</span><br><span class="line"></span><br><span class="line">平铺： background-repeat: no-repeat | repeat | repeat-x | repeat-y;</span><br><span class="line"></span><br><span class="line">位置： <span class="selector-tag">background-position</span>: 水平<span class="selector-tag">px</span>(默认<span class="selector-tag">left</span>) 垂直<span class="selector-tag">px</span>(默认<span class="selector-tag">center</span>);</span><br><span class="line"></span><br><span class="line">背景色：<span class="selector-tag">background-color</span>: <span class="selector-tag">red</span>; 注意：默认值<span class="selector-tag">transparent</span>。</span><br></pre></td></tr></table></figure>
+
+<h2 id="文字样式"><a href="#文字样式" class="headerlink" title="文字样式"></a>文字样式</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">1、垂直对齐方式     </span><br><span class="line">    vertical-align：baseline | top | bottom | middle;</span><br><span class="line">    	—————— top</span><br><span class="line">    	—————— middle</span><br><span class="line">    	—————— baseline</span><br><span class="line">    	—————— bottom</span><br><span class="line">    注意：默认值baseline。</span><br><span class="line">                    </span><br><span class="line">2、水平对齐方式     </span><br><span class="line">    text-algin: left | center | right;</span><br><span class="line">    注意：默认值left，只能用在块级元素。</span><br><span class="line"></span><br><span class="line">3、文字缩进            </span><br><span class="line">    text-indent：2em;</span><br><span class="line">    </span><br><span class="line">4、文字间距</span><br><span class="line">    letter-spacing: 0.2em;</span><br><span class="line"> </span><br><span class="line">5、单词间距</span><br><span class="line">    word-spacing: 0.2em;</span><br><span class="line">    </span><br><span class="line">6、文字下划线          </span><br><span class="line">    text-decoration: none| underline | line-through;</span><br></pre></td></tr></table></figure>
+
+<h2 id="文字阴影"><a href="#文字阴影" class="headerlink" title="文字阴影"></a>文字阴影</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">text-shadow: 水平偏移 垂直偏移 模糊度 颜色;   </span><br><span class="line"></span><br><span class="line">注意：可设置多个阴影用逗号,分隔；</span><br><span class="line"></span><br><span class="line">text-shadow: 2px 5px 10px red,</span><br><span class="line">             3px 2px 10px green;</span><br></pre></td></tr></table></figure>
+
+<h2 id="盒子阴影"><a href="#盒子阴影" class="headerlink" title="盒子阴影"></a>盒子阴影</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">box-shadow: 水平偏移 垂直偏移 模糊度 颜色;  </span><br><span class="line"></span><br><span class="line">注意：盒子阴影分内阴影和外阴影，不设置默认为外阴影，可设置多个阴影用逗号,分隔；</span><br><span class="line"></span><br><span class="line">box-shadow: 2px 5px 10px red,</span><br><span class="line">            3px 2px 10px green;</span><br><span class="line">             </span><br><span class="line">内阴影设置如下：</span><br><span class="line">box-shadow: inset 2px 5px 10px red;</span><br></pre></td></tr></table></figure>
+
+<h2 id="box-sizing"><a href="#box-sizing" class="headerlink" title="box-sizing"></a>box-sizing</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">box-sizing用来控制元素的盒子模型的解析模式，默认为content-box。</span><br><span class="line"></span><br><span class="line">box-sizing: content-box;</span><br><span class="line">盒子的实际大小：内容+padding+border；</span><br><span class="line"></span><br><span class="line">box-sizing: border-box;</span><br><span class="line">盒子的实际大小：为设置的宽度和高度的大小；</span><br><span class="line">注意：border-box为内减盒模型，一般移动端会设置盒子为内减盒模型，会改变盒子内容的大小。</span><br></pre></td></tr></table></figure>
+
+<h2 id="选择器"><a href="#选择器" class="headerlink" title="选择器"></a>选择器</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">后代选择器  div p &#123;&#125;  所有子元素</span><br><span class="line"></span><br><span class="line">直接选择器  div&gt;p &#123;&#125;  直接子元素</span><br><span class="line"></span><br><span class="line">交集选择器  div.one &#123;&#125; 即是div便签又是class为one的选择器</span><br><span class="line"></span><br><span class="line">并集选择器  div,p,span &#123;&#125; 所有div标签、p标签和span标签</span><br><span class="line"></span><br><span class="line">优先级：* &lt; 标签 &lt; 类 &lt; id &lt; 行内样式 &lt; !important</span><br></pre></td></tr></table></figure>
+
+<h2 id="选择器-伪类"><a href="#选择器-伪类" class="headerlink" title="选择器(伪类)"></a>选择器(伪类)</h2><table>
+<thead>
+<tr>
+<th>编号</th>
+<th>伪类选择器</th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>a:link {}</td>
+<td>选中a标签，存在一定兼容性，推荐使用a {} 或者 类选择器</td>
+</tr>
+<tr>
+<td>2</td>
+<td>a:visited {}</td>
+<td>设置a标签被访问过后样式，存在缓存问题，只能设置与颜色相关的样式</td>
+</tr>
+<tr>
+<td>3</td>
+<td>a:active {}</td>
+<td>设置a标签被激活时的样式</td>
+</tr>
+<tr>
+<td>4</td>
+<td>input:focus {}</td>
+<td>设置输入框获取焦点时的样式</td>
+</tr>
+<tr>
+<td>5</td>
+<td>xxx:hover {}</td>
+<td>设置鼠标悬停在xxx标签的样式</td>
+</tr>
+<tr>
+<td>6</td>
+<td>xxx:hover yyy {}</td>
+<td>鼠标悬停在xxx标签上，xxx标签内部yyy标签显示的样式</td>
+</tr>
+<tr>
+<td>7</td>
+<td>xxx:first-child {}</td>
+<td>第一个xxx元素的样式</td>
+</tr>
+<tr>
+<td>8</td>
+<td>xxx:last-child {}</td>
+<td>最后一个xxx元素的样式</td>
+</tr>
+<tr>
+<td>9</td>
+<td>xxx:nth-child(n) {}</td>
+<td>n可以是数字，也可以是even(偶数)，odd(奇数)，表达式(2n+1)</td>
+</tr>
+<tr>
+<td>10</td>
+<td>xxx:nth-last-child {}</td>
+<td>倒数第n个元素，取值同xxx:nth-child(n) {}</td>
+</tr>
+<tr>
+<td>11</td>
+<td>:target {}</td>
+<td>目标伪类选择器</td>
+</tr>
+</tbody></table>
+<h2 id="伪元素"><a href="#伪元素" class="headerlink" title="伪元素"></a>伪元素</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">::before</span><br><span class="line"></span><br><span class="line">::after</span><br><span class="line"></span><br><span class="line">属于行内元素、需要设置content属性;</span><br><span class="line"></span><br><span class="line">不能嵌套、一个元素最多用2个伪元素。</span><br></pre></td></tr></table></figure>
+
+<h2 id="浮动-float"><a href="#浮动-float" class="headerlink" title="浮动(float)"></a>浮动(float)</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">1、让块级元素一行显示；</span><br><span class="line"></span><br><span class="line">2、浮动元素脱离网页标准流，不占位；</span><br><span class="line"></span><br><span class="line">3、图片和文字环绕效果使用浮动；</span><br><span class="line"></span><br><span class="line">4、元素设置浮动后，dispaly: block;</span><br></pre></td></tr></table></figure>
+
+<h2 id="清除浮动"><a href="#清除浮动" class="headerlink" title="清除浮动"></a>清除浮动</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">方法一：</span><br><span class="line">    父元素无高度，浮动后设置空标签，空标签设置clear： both | left | right;</span><br><span class="line">    </span><br><span class="line">方法二：</span><br><span class="line">    父元素设置overflow: hidden;</span><br><span class="line">    </span><br><span class="line">方法三：</span><br><span class="line">    伪元素清除法</span><br><span class="line">        .clear::after &#123;</span><br><span class="line">            content: <span class="string">""</span>;</span><br><span class="line">            height: 0px;</span><br><span class="line">            width:0px;</span><br><span class="line">            line-height:0px;</span><br><span class="line">            display: block;</span><br><span class="line">            clear: both;</span><br><span class="line">            visibility: hidden;</span><br><span class="line">        &#125;</span><br><span class="line">        .clearfix &#123;zoom: 1;&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="定位-position"><a href="#定位-position" class="headerlink" title="定位(position)"></a>定位(position)</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">1、分为静态定位、绝对定位、相对定位和固定定位；</span><br><span class="line"></span><br><span class="line">2、静态定位：设不设置一样，没区别，不改变元素位置；</span><br><span class="line"></span><br><span class="line">3、相对定位：relative，相对与自己移动；</span><br><span class="line"></span><br><span class="line">4、绝对定位：absolute，一般子绝父相，父元素无定位就相对body，元素脱离标准流，后面的元素会覆盖；</span><br><span class="line"></span><br><span class="line">5、固定定位：fixed，绝对定位的一种特殊情况，定位相对body，脱离标准流，不占位。</span><br><span class="line"></span><br><span class="line">注意：z-index值越大，层级越高；</span><br><span class="line">     父元素层级影响子元素层级；</span><br><span class="line">     如果设置定位会导致被定位盒子offsetLeft取值错误。</span><br></pre></td></tr></table></figure>
+
+<h2 id="伸缩盒子"><a href="#伸缩盒子" class="headerlink" title="伸缩盒子"></a>伸缩盒子</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">1、父元素为伸缩容器 </span><br><span class="line">     dispaly: flex;</span><br><span class="line">     </span><br><span class="line">2、伸缩容器的主轴方向</span><br><span class="line">     flex-direction: row | row-reverse | column | column-reverse;</span><br><span class="line">     </span><br><span class="line">3、横轴方向上的对齐方式 </span><br><span class="line">     justify-content: flex-start | flex-end | center | space-between | space-around;</span><br><span class="line">     </span><br><span class="line">4、纵轴方向上的对齐方式 </span><br><span class="line">     align-items: flex-start | flex-end | center | baseline | stretch;</span><br><span class="line">     </span><br><span class="line">5、元素的换行方式 </span><br><span class="line">     flex-wrap:nowrap|wrap|wrap-reverse|initial|inherit;</span><br><span class="line">     </span><br><span class="line">6、设置各个行的对齐 </span><br><span class="line">     align-content: flex-start | flex-end | center | space-between | space-around | stretch;</span><br></pre></td></tr></table></figure>
+
+<h2 id="媒体查询"><a href="#媒体查询" class="headerlink" title="媒体查询"></a>媒体查询</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">html文件：</span><br><span class="line">   &lt;link rel=<span class="string">""</span> <span class="built_in">type</span>=<span class="string">""</span> href=<span class="string">"css样式表"</span> media=<span class="string">"only screen and(max-device-width:480px)"</span>&gt;</span><br><span class="line"></span><br><span class="line">css样式表：</span><br><span class="line">   @media only screen and(max-device-width:480px)&#123;/* css样式 */&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="布局效果"><a href="#布局效果" class="headerlink" title="布局效果"></a>布局效果</h2><h3 id="水平居中"><a href="#水平居中" class="headerlink" title="水平居中"></a>水平居中</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">1、margin: 0 auto;</span><br><span class="line">注意：盒子必须是块级元素。</span><br><span class="line"></span><br><span class="line">2、table设置align=<span class="string">"center"</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="水平垂直居中"><a href="#水平垂直居中" class="headerlink" title="水平垂直居中"></a>水平垂直居中</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line">方法1：</span><br><span class="line">.wraper &#123;</span><br><span class="line">     position: relative;</span><br><span class="line">     .box &#123;</span><br><span class="line">          position: absolute;</span><br><span class="line">          top: 50%;</span><br><span class="line">          left: 50%;</span><br><span class="line">          width: 100px;</span><br><span class="line">          height: 100px;</span><br><span class="line">          margin: -50px 0 0 -50px;</span><br><span class="line">     &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">方法2：</span><br><span class="line">.wraper &#123;</span><br><span class="line">position: relative;</span><br><span class="line">     .box &#123;</span><br><span class="line">          position: absolute;</span><br><span class="line">          top: 50%;</span><br><span class="line">          left: 50%;</span><br><span class="line">          transform: translate(-50%, -50%);</span><br><span class="line">     &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">方法3：定位+left:0;+right:0;+top:0;+bottom:0;+margin: auto;</span><br><span class="line"></span><br><span class="line">方法4：</span><br><span class="line">.wraper &#123;</span><br><span class="line">     .box &#123;</span><br><span class="line">          display: flex;</span><br><span class="line">          justify-content:center;</span><br><span class="line">          align-items: center;</span><br><span class="line">          height: 100px;</span><br><span class="line">     &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">方法5：</span><br><span class="line">.wraper &#123;</span><br><span class="line">     display: table;</span><br><span class="line">     .box &#123;</span><br><span class="line">          display: table-cell;</span><br><span class="line">          vertical-align: middle;</span><br><span class="line">     &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="两栏自适应—宽度"><a href="#两栏自适应—宽度" class="headerlink" title="两栏自适应—宽度"></a>两栏自适应—宽度</h3><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">.left &#123;float：left&#125;</span><br><span class="line"></span><br><span class="line">.right &#123;overflow：hidden&#125;</span><br><span class="line"></span><br><span class="line">或者</span><br><span class="line"></span><br><span class="line">.left &#123;float：left｝</span><br><span class="line">    </span><br><span class="line">.right &#123;padding：***px;&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="两栏自适应—高度"><a href="#两栏自适应—高度" class="headerlink" title="两栏自适应—高度"></a>两栏自适应—高度</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">效果：外层div高度自适应，内层两个div，一个高度100px，一个填满剩下的高度。</span><br><span class="line"></span><br><span class="line">解决：外层div设置position: relative;</span><br><span class="line">     内层高度自适应div设置position: absolute;</span><br><span class="line">                       top: 100px;</span><br><span class="line">                       bottom:0;</span><br></pre></td></tr></table></figure>
+
+<h2 id="CSS效果"><a href="#CSS效果" class="headerlink" title="CSS效果"></a>CSS效果</h2><h3 id="扇形"><a href="#扇形" class="headerlink" title="扇形"></a>扇形</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">border-top</span>: 100<span class="selector-tag">px</span> <span class="selector-tag">solid</span> <span class="selector-tag">red</span>;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">border-bottom</span>: 100<span class="selector-tag">px</span> <span class="selector-tag">solid</span> <span class="selector-tag">transparent</span>;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">border-left</span>: 100<span class="selector-tag">px</span> <span class="selector-tag">solid</span> <span class="selector-tag">transparent</span>;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">border-right</span>: 100<span class="selector-tag">px</span> <span class="selector-tag">solid</span> <span class="selector-tag">transparent</span>;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">border-radius</span>: 100<span class="selector-tag">px</span>;</span><br></pre></td></tr></table></figure>
+
+<h3 id="三角形"><a href="#三角形" class="headerlink" title="三角形"></a>三角形</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">border-top</span>: 100<span class="selector-tag">px</span> <span class="selector-tag">solid</span> <span class="selector-tag">red</span>;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">border-bottom</span>: 100<span class="selector-tag">px</span> <span class="selector-tag">solid</span> <span class="selector-tag">transparent</span>;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">border-left</span>: 100<span class="selector-tag">px</span> <span class="selector-tag">solid</span> <span class="selector-tag">transparent</span>;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">border-right</span>: 100<span class="selector-tag">px</span> <span class="selector-tag">solid</span> <span class="selector-tag">transparent</span>;</span><br></pre></td></tr></table></figure>
+
+<h3 id="省略号"><a href="#省略号" class="headerlink" title="省略号"></a>省略号</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">text-overflow</span>: <span class="selector-tag">ellipsis</span>;（规定当文本溢出时，显示省略符号来代表被修剪的文本）</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">white-space</span>: <span class="selector-tag">nowrap</span>;（设置文字在一行显示，不能换行）</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">overflow</span>: <span class="selector-tag">hidden</span>;（文字长度超出限定宽度，则隐藏超出的内容）</span><br></pre></td></tr></table></figure>
+
+<h3 id="隐藏元素"><a href="#隐藏元素" class="headerlink" title="隐藏元素"></a>隐藏元素</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">1、width、height设置为0px；</span><br><span class="line"></span><br><span class="line">2、dispaly: none; </span><br><span class="line">不占位，文档布局中不再分配空间；</span><br><span class="line"></span><br><span class="line">3、visibility: hidden; </span><br><span class="line">占位，文档布局中仍保留原来的空间；</span><br><span class="line"></span><br><span class="line">4、visibility: collapse;</span><br><span class="line">谷歌中，相当于visibility: hidden;</span><br><span class="line">其他浏览器中，相当于dispaly: none;</span><br></pre></td></tr></table></figure>
+
+<h3 id="颜色透明效果"><a href="#颜色透明效果" class="headerlink" title="颜色透明效果"></a>颜色透明效果</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">rgba()</span><br><span class="line">opacity()</span><br></pre></td></tr></table></figure>
+
+<h3 id="垂直居中效果"><a href="#垂直居中效果" class="headerlink" title="垂直居中效果"></a>垂直居中效果</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">1、文字的垂直居中</span><br><span class="line">    height: 30px;</span><br><span class="line">    line-height: 30px;</span><br><span class="line"></span><br><span class="line">2、图片的垂直居中</span><br><span class="line">    先在页面写上一些文字，在设置高度、行高和垂直对齐方式，最后删除文字即可；</span><br><span class="line">    height: 30px;</span><br><span class="line">    line-height: 30px;</span><br><span class="line">    vertical-align：middle;</span><br></pre></td></tr></table></figure>
+
+<h3 id="无滚动条滚动"><a href="#无滚动条滚动" class="headerlink" title="无滚动条滚动"></a>无滚动条滚动</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt; !<span class="selector-tag">--</span> 改变滑动条样式，去掉它背景色 <span class="selector-tag">--</span>&gt;</span><br><span class="line"></span><br><span class="line">元素名<span class="selector-pseudo">::-webkit-scrollbar</span> &#123;</span><br><span class="line">     <span class="attribute">width</span>: <span class="number">2px</span>;</span><br><span class="line">     <span class="attribute">background</span>: none;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="1px边框变粗"><a href="#1px边框变粗" class="headerlink" title="1px边框变粗"></a>1px边框变粗</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line">1、此问题出现在移动端开发中，设置边框为1px，但是在手机查看发现比1px粗。</span><br><span class="line"></span><br><span class="line">2、产生原因：移动端使用的是高清屏，高清屏的分辨率始终是普通屏幕的2倍，在devicePixelRatio=2的高清屏下1px的边框会显示成2px，所以高清屏下设置1px边框感觉变粗。</span><br><span class="line"></span><br><span class="line">3、简单来说就是手机屏幕分辨率越来越高了，同样大小的一个手机，它的实际物理像素数更多了。因为不同的移动设备有不同的像素密度，所以我们所写的1px在不同的移动设备上等于这个移动设备的1px。</span><br><span class="line"></span><br><span class="line">4、解决办法</span><br><span class="line">    1）使用flexible.js</span><br><span class="line">    2）使用meta viewport控制</span><br><span class="line">    3）使用边框图片border-image</span><br><span class="line">    4）利用背景渐变linear-gradient</span><br><span class="line">        .bg_border &#123;</span><br><span class="line">            background-image: linear-gradient(0deg,black 50%,transparent 50%);</span><br><span class="line">            background-size: 100% 1px;</span><br><span class="line">            background-repeat: no-repeat;</span><br><span class="line">        &#125;</span><br><span class="line">    5）伪类 + scale（一个元素只能用两个伪类）</span><br><span class="line">        元素的border去掉，利用伪类做border，然后缩小一半；</span><br><span class="line">        元素相对定位，新做的border绝对定位；</span><br><span class="line">        【html文件】</span><br><span class="line">            &lt;ul class=&quot;hairlines&quot;&gt;</span><br><span class="line">                &lt;li&gt;1&lt;/li&gt;</span><br><span class="line">                &lt;li&gt;2&lt;/li&gt;</span><br><span class="line">            &lt;/ul&gt;</span><br><span class="line">        【css文件】	</span><br><span class="line">            .hairlines li&#123;</span><br><span class="line">                position: relative;</span><br><span class="line">                border:none;</span><br><span class="line">            &#125;</span><br><span class="line">            .hairlines li:after&#123;</span><br><span class="line">                content: &apos;&apos;;</span><br><span class="line">                position: absolute;</span><br><span class="line">                left: 0;</span><br><span class="line">                bottom: 0;</span><br><span class="line">                background: #cccccc;</span><br><span class="line">                width: 100%;</span><br><span class="line">                height: 1px;</span><br><span class="line">                -webkit-transform: scaleY(0.5);</span><br><span class="line">                transform: scaleY(0.5);</span><br><span class="line">                -webkit-transform-origin: 0 0;</span><br><span class="line">                transform-origin: 0 0;</span><br><span class="line">            &#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="底部3px空白"><a href="#底部3px空白" class="headerlink" title="底部3px空白"></a>底部3px空白</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">产生原因：行内块元素(img、input)、表格自带vertical-align属性，默认值baseline；导致页面img、input元素底部有3px空白。</span><br><span class="line"></span><br><span class="line">解决办法：vertical-align: top|bottom|middle;或者display: block;</span><br></pre></td></tr></table></figure>
+
+<h3 id="元素间的空白缝隙"><a href="#元素间的空白缝隙" class="headerlink" title="元素间的空白缝隙"></a>元素间的空白缝隙</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">产生原因：元素设置display: inline-block;如果存在空格、换行会产生缝隙；</span><br><span class="line"></span><br><span class="line">解决方法：移除空格、margin使用负值。</span><br></pre></td></tr></table></figure>
+
+<h3 id="修改谷歌默认最小字体12px"><a href="#修改谷歌默认最小字体12px" class="headerlink" title="修改谷歌默认最小字体12px"></a>修改谷歌默认最小字体12px</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">-webkit-text-size-adjust</span>: <span class="selector-tag">none</span>;</span><br><span class="line"></span><br><span class="line">或者</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">-webkit-transform</span>: <span class="selector-tag">scale</span>(0<span class="selector-class">.8</span>);</span><br></pre></td></tr></table></figure>
+
+<h2 id="鼠标穿透"><a href="#鼠标穿透" class="headerlink" title="鼠标穿透"></a>鼠标穿透</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">1、此属性来自于SVG技术,取值有auto、none、visiblePainted、visibleFill、visibleStroke、visible、painted、fill、stroke、all、inherit。【对于浏览器来说，只有auto和non两个值可用】。</span><br><span class="line"></span><br><span class="line">2、绝对定位元素盖住的链接和添加某事件的元素将不会跳转和事件触发，但该属性可以决定是否能穿透绝对定位。</span><br><span class="line"></span><br><span class="line">3、pointer-events: auto | none ;</span><br><span class="line">    auto——效果和没有定义pointer-events属性相同，鼠标不会穿透当前层；</span><br><span class="line">    none——鼠标去监听下层中的元素；</span><br><span class="line">    如果下层元素也设置了pointer-events不为none的值，比如auto，鼠标还是会监听这个下层元素。</span><br><span class="line">    </span><br><span class="line">4、Firefox 3.6+、chrome 2.0+、safari 4.0+都支持此CSS3属性，IE6/7/8/9都不支持。</span><br><span class="line"></span><br><span class="line">5、Opera在SVG中支持该属性但是HTML中不支持。</span><br></pre></td></tr></table></figure>
+
+<h2 id="格式上下文（bfc）"><a href="#格式上下文（bfc）" class="headerlink" title="格式上下文（bfc）"></a>格式上下文（bfc）</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+    </div>
+    
+    <div class="post-footer">
+        <div>
+            
+                转载声明：商业转载请联系作者获得授权,非商业转载请注明出处 © <a href="" target="_blank">Snippet</a>
+            
+        </div>
+        <div>
+            
+        </div>
+    </div>
+</article>
+
+<div class="article-nav prev-next-wrap clearfix">
+    
+        <a href="/2020/01/03/4JS归纳/" class="pre-post btn btn-default" title='JS归纳'>
+            <i class="fa fa-angle-left fa-fw"></i><span class="hidden-lg">上一篇</span>
+            <span class="hidden-xs">JS归纳</span>
+        </a>
+    
+    
+        <a href="/2020/01/03/2HTML归纳/" class="next-post btn btn-default" title='HTML归纳'>
+            <span class="hidden-lg">下一篇</span>
+            <span class="hidden-xs">HTML归纳</span><i class="fa fa-angle-right fa-fw"></i>
+        </a>
+    
+</div>
+
+
+    <div id="comments">
+        
+	
+    <div id="vcomments" class="valine"></div>
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="/assets/valine.min.js"></script>
+
+    <script>
+        new Valine({
+            av: AV,
+            el: '#vcomments',
+            appId: 'xOKV9J4UeQAtVkvnJC7Kq2Jn-gzGzoHsz',
+            appKey: 'erIpQac4azoCmgfBB7Dl9maa',
+            placeholder: '说点什么吧',
+            notify: false,
+            verify: true,
+            avatar: 'mm',
+            meta: 'nick,mail'.split(','),
+            pageSize: '10',
+            path: window.location.pathname,
+            lang: 'zh-CN'.toLowerCase()
+        })
+    </script>
+
+
+    </div>
+
+
+
+
+
+                </main>
+                
+                    <aside id="article-toc" role="navigation" class="col-md-4">
+    <div class="widget">
+        <h3 class="title">文章目录</h3>
+        
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#盒子模型"><span class="toc-text">盒子模型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CSS单位"><span class="toc-text">CSS单位</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CSS路径"><span class="toc-text">CSS路径</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CSS边框"><span class="toc-text">CSS边框</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#边框圆角"><span class="toc-text">边框圆角</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#背景图片"><span class="toc-text">背景图片</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#文字样式"><span class="toc-text">文字样式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#文字阴影"><span class="toc-text">文字阴影</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#盒子阴影"><span class="toc-text">盒子阴影</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#box-sizing"><span class="toc-text">box-sizing</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#选择器"><span class="toc-text">选择器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#选择器-伪类"><span class="toc-text">选择器(伪类)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#伪元素"><span class="toc-text">伪元素</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#浮动-float"><span class="toc-text">浮动(float)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#清除浮动"><span class="toc-text">清除浮动</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#定位-position"><span class="toc-text">定位(position)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#伸缩盒子"><span class="toc-text">伸缩盒子</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#媒体查询"><span class="toc-text">媒体查询</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#布局效果"><span class="toc-text">布局效果</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#水平居中"><span class="toc-text">水平居中</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#水平垂直居中"><span class="toc-text">水平垂直居中</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#两栏自适应—宽度"><span class="toc-text">两栏自适应—宽度</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#两栏自适应—高度"><span class="toc-text">两栏自适应—高度</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CSS效果"><span class="toc-text">CSS效果</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#扇形"><span class="toc-text">扇形</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#三角形"><span class="toc-text">三角形</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#省略号"><span class="toc-text">省略号</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#隐藏元素"><span class="toc-text">隐藏元素</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#颜色透明效果"><span class="toc-text">颜色透明效果</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#垂直居中效果"><span class="toc-text">垂直居中效果</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#无滚动条滚动"><span class="toc-text">无滚动条滚动</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1px边框变粗"><span class="toc-text">1px边框变粗</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#底部3px空白"><span class="toc-text">底部3px空白</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#元素间的空白缝隙"><span class="toc-text">元素间的空白缝隙</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#修改谷歌默认最小字体12px"><span class="toc-text">修改谷歌默认最小字体12px</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#鼠标穿透"><span class="toc-text">鼠标穿透</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#格式上下文（bfc）"><span class="toc-text">格式上下文（bfc）</span></a></li></ol>
+        
+    </div>
+</aside>
+
+                
+            </div>
+        </div>
+    </section>
+    <footer class="main-footer">
+    <div class="container">
+        <div class="row">
+        </div>
+    </div>
+</footer>
+
+<a id="back-to-top" class="icon-btn hide">
+	<i class="fa fa-chevron-up"></i>
+</a>
+
+
+
+
+    <div class="copyright">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="busuanzi">
+    
+</div>
+
+            </div>
+            <div class="col-sm-12">
+                <span>Copyright &copy; 2017
+                </span> |
+                <span>
+                    Powered by <a href="//hexo.io" class="copyright-links" target="_blank" rel="nofollow">Hexo</a>
+                </span> |
+                <span>
+                    Theme by <a href="//github.com/shenliyang/hexo-theme-snippet.git" class="copyright-links" target="_blank" rel="nofollow">Snippet</a>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+<script src="/js/app.js?rev=@@hash"></script>
+
+</body>
+</html>

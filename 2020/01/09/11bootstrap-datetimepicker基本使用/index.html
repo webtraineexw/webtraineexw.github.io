@@ -18,10 +18,10 @@
     <link rel="dns-prefetch" href="http://yoursite.com">
     <!--SEO-->
 
-    <meta name="keywords" content>
+    <meta name="keywords" content="bootstrap时间日期插件">
 
 
-    <meta name="description" content="引入相关文件123&lt;link rel=" stylesheet" href="../common/bootstrap-datepicker/bootstrap-datetimepicker....">
+    <meta name="description" content="引入相关文件12345&lt;link rel=" stylesheet" href="../common/bootstrap-datepicker/bootstrap-datetimepicke...">
 
 
 
@@ -156,6 +156,8 @@
             <i class="fa fa-tags"></i>
             <span class="tags-meta">
                 
+                    <a class="tag-link" href="/tags/bootstrap时间日期插件/">bootstrap时间日期插件</a>
+                
             </span>
         </span>
     
@@ -164,7 +166,7 @@
         
         <span class="fa-wrap">
             <i class="fa fa-clock-o"></i>
-            <span class="date-meta">2020/01/06</span>
+            <span class="date-meta">2020/01/09</span>
         </span>
         
     
@@ -174,11 +176,11 @@
     </div>
     
     <div class="post-body post-content">
-        <h2 id="引入相关文件"><a href="#引入相关文件" class="headerlink" title="引入相关文件"></a>引入相关文件</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;link rel=<span class="string">"stylesheet"</span> href=<span class="string">"../common/bootstrap-datepicker/bootstrap-datetimepicker.css"</span>&gt;</span><br><span class="line">&lt;script src=<span class="string">"../common/bootstrap-datepicker/bootstrap-datetimepicker.min.js"</span>&gt;&lt;/script&gt;</span><br><span class="line">&lt;script src=<span class="string">"../common/bootstrap-datepicker/bootstrap-datetimepicker.zh-CN.js"</span>&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+        <h2 id="引入相关文件"><a href="#引入相关文件" class="headerlink" title="引入相关文件"></a>引入相关文件</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">href</span>=<span class="string">"../common/bootstrap-datepicker/bootstrap-datetimepicker.css"</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"../common/bootstrap-datepicker/bootstrap-datetimepicker.min.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"../common/bootstrap-datepicker/bootstrap-datetimepicker.zh-CN.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
-<h2 id="html基本模版"><a href="#html基本模版" class="headerlink" title="html基本模版"></a>html基本模版</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;inpu <span class="built_in">type</span>=<span class="string">"text"</span> id=<span class="string">"datetime"</span>/&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="html基本模版"><a href="#html基本模版" class="headerlink" title="html基本模版"></a>html基本模版</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">inpu</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">id</span>=<span class="string">"datetime"</span>/&gt;</span></span><br></pre></td></tr></table></figure>
 
-<h2 id="JS初始化"><a href="#JS初始化" class="headerlink" title="JS初始化"></a>JS初始化</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"> $(<span class="string">'#datetime'</span>).datetimepicker(&#123;</span><br><span class="line">          format: <span class="string">'yyyy-mm-dd hh:ii:00'</span>,</span><br><span class="line">          language: <span class="string">'zh-CN'</span>,</span><br><span class="line">          autoclose: <span class="literal">true</span>,</span><br><span class="line">          weekStart: 1,</span><br><span class="line">          todayBtn: 1,</span><br><span class="line">          pickerPosition: <span class="string">'top-right'</span>,</span><br><span class="line">          forceParse: 0,</span><br><span class="line">          setStartDate: <span class="string">'2012-01-01'</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h2 id="JS初始化"><a href="#JS初始化" class="headerlink" title="JS初始化"></a>JS初始化</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"> $(<span class="string">'#datetime'</span>).datetimepicker(&#123;</span><br><span class="line">          format: <span class="string">'yyyy-mm-dd hh:ii:00'</span>,</span><br><span class="line">          language: <span class="string">'zh-CN'</span>,</span><br><span class="line">          autoclose: <span class="literal">true</span>,</span><br><span class="line">          weekStart: <span class="number">1</span>,</span><br><span class="line">          todayBtn: <span class="number">1</span>,</span><br><span class="line">          pickerPosition: <span class="string">'top-right'</span>,</span><br><span class="line">          forceParse: <span class="number">0</span>,</span><br><span class="line">          setStartDate: <span class="string">'2012-01-01'</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 
 
     </div>
@@ -197,13 +199,13 @@
 
 <div class="article-nav prev-next-wrap clearfix">
     
-        <a href="/2020/01/06/13ES6/" class="pre-post btn btn-default" title='ES6学习'>
+        <a href="/2020/02/11/12ES6教程/" class="pre-post btn btn-default" title='ES6教程'>
             <i class="fa fa-angle-left fa-fw"></i><span class="hidden-lg">上一篇</span>
-            <span class="hidden-xs">ES6学习</span>
+            <span class="hidden-xs">ES6教程</span>
         </a>
     
     
-        <a href="/2020/01/05/10网址大全/" class="next-post btn btn-default" title='常用网址'>
+        <a href="/2020/01/06/10常用网址/" class="next-post btn btn-default" title='常用网址'>
             <span class="hidden-lg">下一篇</span>
             <span class="hidden-xs">常用网址</span><i class="fa fa-angle-right fa-fw"></i>
         </a>

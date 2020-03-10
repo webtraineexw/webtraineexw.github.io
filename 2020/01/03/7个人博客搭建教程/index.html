@@ -182,9 +182,9 @@
 
 <h2 id="创建远程仓库"><a href="#创建远程仓库" class="headerlink" title="创建远程仓库"></a>创建远程仓库</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">在github上新建一个名为xxx.github.io的仓库，（xxx为你的github用户名，其它名称无效）；</span><br><span class="line"></span><br><span class="line">将来你的网站访问地址就是 http://xxx.github.io；</span><br><span class="line"></span><br><span class="line">每一个github账户最多只能创建一个这样可以直接使用域名访问的仓库。</span><br></pre></td></tr></table></figure>
 
-<h2 id="配置SSH密钥"><a href="#配置SSH密钥" class="headerlink" title="配置SSH密钥"></a>配置SSH密钥</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">检查本机已存在的ssh密钥，不存在需要生成密钥</span><br></pre></td></tr></table></figure>
+<h2 id="配置SSH秘钥"><a href="#配置SSH秘钥" class="headerlink" title="配置SSH秘钥"></a>配置SSH秘钥</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">检查本机已存在的ssh秘钥，不存在需要生成密钥</span><br></pre></td></tr></table></figure>
 
-<p>参考链接: <a href="https://webtraineexw.github.io/2020/01/03/ssh%E5%AF%86%E9%92%A5/" target="_blank" rel="noopener">密钥的生成与使用</a></p>
+<p>参考链接: <a href="https://webtraineexw.github.io/2020/01/04/8%E5%AF%86%E9%92%A5%E7%9A%84%E7%94%9F%E6%88%90%E4%B8%8E%E4%BD%BF%E7%94%A8/" target="_blank" rel="noopener">秘钥的生成与使用</a></p>
 <h2 id="hexo的安装"><a href="#hexo的安装" class="headerlink" title="hexo的安装"></a>hexo的安装</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo</span><br></pre></td></tr></table></figure>
 
 <h2 id="hexo初始化"><a href="#hexo初始化" class="headerlink" title="hexo初始化"></a>hexo初始化</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">1、在电脑的某个地方新建一个名为hexo的文件夹，切换到hexo文件夹目录，执行 hexo init；</span><br><span class="line"></span><br><span class="line">hexo会自动下载一些文件到这个目录，包括node_modules等。</span><br><span class="line"></span><br><span class="line">2、执行下列命令：</span><br><span class="line">hexo g <span class="comment"># 生成(hexo会在public文件夹生成相关html文件，这些文件将来都是要提交到github去的)</span></span><br><span class="line"></span><br><span class="line">hexo s <span class="comment"># 启动服务(开启本地预览服务，打开浏览器访问 http://localhost:4000 即可看到内容)</span></span><br><span class="line"></span><br><span class="line">3、第一次初始化的时候hexo已经帮我们写了一篇名为 Hello World 的文章，默认的主题比较丑。</span><br></pre></td></tr></table></figure>
@@ -216,9 +216,9 @@
 
 <div class="article-nav prev-next-wrap clearfix">
     
-        <a href="/2020/01/04/8密钥的生成与使用/" class="pre-post btn btn-default" title='密钥的生成与使用'>
+        <a href="/2020/01/04/8秘钥的生成与使用/" class="pre-post btn btn-default" title='秘钥的生成与使用'>
             <i class="fa fa-angle-left fa-fw"></i><span class="hidden-lg">上一篇</span>
-            <span class="hidden-xs">密钥的生成与使用</span>
+            <span class="hidden-xs">秘钥的生成与使用</span>
         </a>
     
     
@@ -267,7 +267,7 @@
     <div class="widget">
         <h3 class="title">文章目录</h3>
         
-            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#准备工作"><span class="toc-text">准备工作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#创建远程仓库"><span class="toc-text">创建远程仓库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#配置SSH密钥"><span class="toc-text">配置SSH密钥</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#hexo的安装"><span class="toc-text">hexo的安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#hexo初始化"><span class="toc-text">hexo初始化</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#hexo主题修改"><span class="toc-text">hexo主题修改</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#hexo主题配置"><span class="toc-text">hexo主题配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#上传到github"><span class="toc-text">上传到github</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#hexo组合命令"><span class="toc-text">hexo组合命令</span></a></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#准备工作"><span class="toc-text">准备工作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#创建远程仓库"><span class="toc-text">创建远程仓库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#配置SSH秘钥"><span class="toc-text">配置SSH秘钥</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#hexo的安装"><span class="toc-text">hexo的安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#hexo初始化"><span class="toc-text">hexo初始化</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#hexo主题修改"><span class="toc-text">hexo主题修改</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#hexo主题配置"><span class="toc-text">hexo主题配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#上传到github"><span class="toc-text">上传到github</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#hexo组合命令"><span class="toc-text">hexo组合命令</span></a></li></ol>
         
     </div>
 </aside>
